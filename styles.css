@@ -66,6 +66,10 @@ footer {
   box-sizing: border-box;
 }
 /* Header Styles */
+nav {
+  padding: 0.5em;
+  display: inline-block;
+}
 nav ul {
   list-style-type: none;
   margin: 0;
