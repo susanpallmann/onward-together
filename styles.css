@@ -10,10 +10,20 @@ body {
   border-radius: 50px;
   margin-right: 2em;
   cursor: pointer;
+  background-color: rgba(255,255,255,0);
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 600;
+  transition-property: background-color;
+  transition-duration: .3s;
+  transition-timing-function: linear;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-timing-function: linear; 
+}
+.button:hover {
+  background-color: rgba(255,255,255,0.3);
 }
 p {
   margin-bottom: 3em;
