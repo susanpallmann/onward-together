@@ -27,6 +27,7 @@ body {
 }
 p {
   margin-bottom: 3em;
+  line-height: 1.75em;
 }
 .button-container {
   text-align: center;
