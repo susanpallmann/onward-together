@@ -1,8 +1,14 @@
 /* Basic Style Initialization */
 body {
-  font-family: 'Merriweather', times, serif;
+  font-family: 'Libre Baskerville', times, serif;
   color: #ffffff;
   background-color: #000000;
+}
+.button {
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  margin-right: 1em;
 }
 /* Bootstrap Add-Ons */
 .hybrid-row p {
@@ -37,7 +43,7 @@ nav li {
   margin-bottom: 8px;
 }
 nav li a {
-  font-family: 'Merriweather', times, serif;
+  font-family: 'Libre Baskerville', times, serif;
   font-size: 0.9em;
   text-decoration: none;
   text-transform: uppercase;
