@@ -37,9 +37,6 @@ a {
   text-decoration: none;
   color: #ffffff;
 }
-footer a:hover {
-  text-decoration: underline;
-}
 .button-container {
   text-align: center;
 }
@@ -48,6 +45,23 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+footer p {
+  margin: 0.5em;
+  font-size: 0.8em;
+  opacity: 0.8;
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-timing-function: linear; 
+}
+footer p:hover {
+  opacity: 1;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 /* Bootstrap Add-Ons */
 .hybrid-row p {
