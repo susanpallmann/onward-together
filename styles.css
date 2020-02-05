@@ -44,7 +44,7 @@ footer a:hover {
   text-align: center;
 }
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 /* Bootstrap Add-Ons */
