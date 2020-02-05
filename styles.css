@@ -44,8 +44,10 @@ footer a:hover {
   text-align: center;
 }
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 /* Bootstrap Add-Ons */
 .hybrid-row p {
