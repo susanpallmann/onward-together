@@ -33,6 +33,9 @@ p {
   margin-bottom: 3em;
   line-height: 1.75em;
 }
+h1 {
+  font-family: 'Merienda', 'Libre Baskerville', serif;
+}
 a {
   text-decoration: none;
   color: #ffffff;
