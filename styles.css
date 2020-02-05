@@ -35,6 +35,8 @@ p {
 }
 h1 {
   font-family: 'Reenie Beanie', 'Libre Baskerville', serif;
+  font-size: 4em;
+  margin: 0;
 }
 a {
   text-decoration: none;
