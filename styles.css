@@ -52,7 +52,7 @@ footer {
 footer p {
   margin: 0.5em;
   font-size: 0.8em;
-  opacity: 0.8;
+  opacity: 0.5;
   transition-property: opacity;
   transition-duration: .2s;
   transition-timing-function: linear;
@@ -88,6 +88,16 @@ footer a:hover {
 nav {
   padding: 0.5em;
   display: inline-block;
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-timing-function: linear; 
+}
+nav:hover {
+  opacity: 1;
 }
 nav ul {
   list-style-type: none;
