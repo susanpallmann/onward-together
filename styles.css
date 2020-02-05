@@ -15,15 +15,17 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 600;
-  transition-property: background-color;
+  opacity: 0.8;
+  transition-property: background-color, opacity;
   transition-duration: .3s;
   transition-timing-function: linear;
-  -webkit-transition-property: background-color;
+  -webkit-transition-property: background-color, opacity;
   -webkit-transition-duration: .3s;
   -webkit-transition-timing-function: linear; 
 }
 .button:hover {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.15);
+  opacity: 1;
 }
 p {
   margin-bottom: 3em;
