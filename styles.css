@@ -28,7 +28,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: inline-block;
-  float: right;
+  float: left;
 }
 nav li {
   float: left;
@@ -38,9 +38,7 @@ nav li {
 }
 nav li a {
   font-family: 'Merriweather', times, serif;
-  font-weight: 800;
   font-size: 0.9em;
-  color: #483C46;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.12em;
