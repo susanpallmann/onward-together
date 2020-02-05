@@ -1,0 +1,48 @@
+/* Basic Style Initialization */
+body {
+  font-family: 'Merriweather', times, serif;
+  color: #ffffff;
+  background-color: #000000;
+}
+/* Bootstrap Add-Ons */
+.hybrid-row p {
+  display: inline-block;
+}
+.expandable {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .3s;
+  transition-timing-function: linear;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-timing-function: linear; 
+  width: 100%;
+}
+.spacer {
+  padding-right: 0;
+  box-sizing: border-box;
+}
+/* Header Styles */
+nav#horizontal ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float: right;
+}
+nav#horizontal li {
+  float: left;
+  margin-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+nav#horizontal li a {
+  font-family: 'Merriweather', times, serif;
+  font-weight: 800;
+  font-size: 0.9em;
+  color: #483C46;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
