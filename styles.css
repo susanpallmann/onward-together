@@ -6,10 +6,20 @@ body {
 }
 .button {
   border: 2px solid #ffffff;
-  padding: 0.5em 1em;
+  padding: 1em 2em;
   border-radius: 50px;
-  margin-right: 1em;
+  margin-right: 2em;
   cursor: pointer;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 3em;
+}
+.button-container {
+  text-align: center;
 }
 /* Bootstrap Add-Ons */
 .hybrid-row p {
