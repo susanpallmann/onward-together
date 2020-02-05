@@ -23,20 +23,20 @@ body {
   box-sizing: border-box;
 }
 /* Header Styles */
-nav#horizontal ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: inline-block;
   float: right;
 }
-nav#horizontal li {
+nav li {
   float: left;
   margin-left: 20px;
   margin-top: 8px;
   margin-bottom: 8px;
 }
-nav#horizontal li a {
+nav li a {
   font-family: 'Merriweather', times, serif;
   font-weight: 800;
   font-size: 0.9em;
@@ -45,4 +45,24 @@ nav#horizontal li a {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   text-align: center;
+}
+/*Nav Underline Animation */
+nav li:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px #FFFFFF;  
+  transform: scaleX(0);
+  transform-origin:  0% 50%;
+}
+nav li:hover:after {
+  transform: scaleX(1);
+}
+nav li#selected:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px #4ECDC4;
+  transform: scaleX(1); 
+}
+nav li:after {
+  transition: transform 250ms ease-in-out;
 }
