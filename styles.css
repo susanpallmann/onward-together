@@ -9,6 +9,7 @@ body {
   padding: 0.5em 1em;
   border-radius: 50px;
   margin-right: 1em;
+  cursor: pointer;
 }
 /* Bootstrap Add-Ons */
 .hybrid-row p {
@@ -49,6 +50,7 @@ nav li a {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   text-align: center;
+  color: #ffffff;
 }
 /*Nav Underline Animation */
 nav li:after {
