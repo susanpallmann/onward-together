@@ -24,12 +24,12 @@ function preLoad(num, path) {
   console.log(num + " " + path);
   var chosenPath = path;
   var randomNum = Math.floor(Math.random() * 2) + 1;
-  var alone = $('.alternate-title').html('Alone');
+  var alone = if ($('.alternate-title').html('Alone'));
   console.log(alone);
   $('.stage-' + num + ' .random').css('display','none');
-  $('.stage-' + num + ' .random[random-choice=' + randomNum).css('display','inline');
+  $('.stage-' + num + ' .random[random-choice=' + randomNum + ']' ).css('display','inline');
   $('.stage-' + num + ' .option').css('display','none');
-  $('.stage-' + num + ' .option[path-option=' + chosenPath ).css('display','inline');
+  $('.stage-' + num + ' .option[path-option=' + chosenPath + ']' ).css('display','inline');
 }
 
 function advanceStage(num , path) {
