@@ -23,10 +23,11 @@ $(document).ready(function () {
 function preLoad(num, path) {
   console.log(num + " " + path);
   var chosenPath = path;
-  if (chosenPath === "A" || "B") {
+  if (chosenPath === "A" || chosenPath === "B") {
     $('.stage-' + num + ' .option').css('display','none');
     $('.stage-' + num + ' .option[path-option=' + chosenPath + ']' ).css('display','inline');
-  } else if (chosenPath === "O") {
+  }
+  if (chosenPath === "O") {
     var randomNum = Math.floor(Math.random() * 2) + 1;
     var alone = $('.alternate-title').text() === "Alone";
     console.log(alone);
