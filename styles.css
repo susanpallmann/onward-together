@@ -130,7 +130,7 @@ nav:hover {
 .title {
   font-family: 'Reenie Beanie', 'Libre Baskerville', serif;
   float: left;
-  margin-right: 1em;
+  margin-right: 0.5em;
   font-size: 1.75em;
 }
 nav ul {
