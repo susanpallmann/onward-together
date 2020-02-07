@@ -64,21 +64,43 @@
             <h1>Echo Cliffs</h1>
             <p>
               <span class="random" random-choice="1">
-                You awake in a bustling tavern. You glance across the table at another adventurer, no doubt also hoping to slay the dragon 
-                you’re after. They look like they [have/have not] been on this journey before, but you will embark today and have a simple 
-                decision to make.
-              </span>
+                You find yourself lost, and decide to call out in case anyone is nearby.
               <span class="random" random-choice="2">
-                You awake in a bustling tavern. You glance across the table at another adventurer, no doubt also hoping to slay the dragon 
-                you’re after. They look like they [have/have not] been on this journey before, but you will embark today and have a simple 
-                decision to make.
+                <span class="option" path-option="A">
+                  You find yourself lost. Suddenly you hear a faint call through the fog. <span class="server-load">Load!Text</span>.
+                </span>
+                <span class="option" path-option="B">
+                  You are unable to find your partner. Suddenly you hear a faint call through the fog. <span class="server-load">Load!Text
+                  </span>. You check your map and call back.
+                </span>
               </span>
             </p>
             <p>
-              Will you go alone or together?
+              You call out into the mist.
             </p>
             <div class="button-container">
-              <span class="button trigger" stage="2" path="A">Alone</span><span class="button trigger" stage="2" path="B">Together</span>
+              <span class="random" random-choice="1">
+                <span class="option" path-option="A">
+                  <span class="button trigger" stage="4" path="A">Where do I go?</span>
+                  <span class="button trigger" stage="4" path="A">I’m lost!</span>
+                  <span class="button trigger" stage="4" path="A">Is anyone out there?</span>
+                </span>
+                <span class="option" path-option="B">
+                  <span class="button trigger" stage="4" path="B">Where do I go?</span>
+                  <span class="button trigger" stage="4" path="C"I’m lost!</span>
+                  <span class="button trigger" stage="4" path="D">Is anyone out there?</span>
+                </span>
+              </span>
+              <span class="random" random-choice="2">
+                <span class="option" path-option="A">
+                  <span class="button trigger" stage="4" path="A"><span class="server-load">Load!Text</span></span>
+                </span>
+                <span class="option" path-option="B">
+                  <span class="button trigger" stage="5" path="A">Mushroom Forest</span>
+                  <span class="button trigger" stage="5" path="B">Tunnel</span>
+                  <span class="button trigger" stage="5" path="C">River</span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
