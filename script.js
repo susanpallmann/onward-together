@@ -23,13 +23,23 @@ $(document).ready(function () {
 function preLoad(num, path) {
   console.log(num + " " + path);
   var chosenPath = path;
-  var randomNum = Math.floor(Math.random() * 2) + 1;
-  var alone = $('.alternate-title').text() === "Alone";
-  console.log(alone);
-  $('.stage-' + num + ' .random').css('display','none');
-  $('.stage-' + num + ' .random[random-choice=' + randomNum + ']' ).css('display','inline');
-  $('.stage-' + num + ' .option').css('display','none');
-  $('.stage-' + num + ' .option[path-option=' + chosenPath + ']' ).css('display','inline');
+  if (chosenPath === "A" || "B") {
+    $('.stage-' + num + ' .option').css('display','none');
+    $('.stage-' + num + ' .option[path-option=' + chosenPath + ']' ).css('display','inline');
+  if (chosenPath === "O") {
+    var randomNum = Math.floor(Math.random() * 2) + 1;
+    var alone = $('.alternate-title').text() === "Alone";
+    console.log(alone);
+    if ( $('.alternate-title').text() === "Alone" ) {
+      $('.stage-' + num + ' .option').css('display','none');
+      $('.stage-' + num + ' .option[path-option=A]' ).css('display','inline');
+    } else {
+      $('.stage-' + num + ' .option').css('display','none');
+      $('.stage-' + num + ' .option[path-option=B]' ).css('display','inline');
+    }
+    $('.stage-' + num + ' .random').css('display','none');
+    $('.stage-' + num + ' .random[random-choice=' + randomNum + ']' ).css('display','inline');
+  }
 }
 
 function advanceStage(num , path) {
