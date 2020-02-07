@@ -3,6 +3,7 @@ main .container.stage {
   opacity: 0;
   height: 0;
   margin-bottom: 0;
+  overflow: hidden;
 }
 main .container.stage.visible {
   opacity: 1;
