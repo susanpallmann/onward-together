@@ -66,6 +66,9 @@ a {
 .button-container {
   text-align: center;
 }
+.dim {
+  opacity: 0.8;
+}
 footer {
   position: relative;
   bottom: 0;
