@@ -7,7 +7,7 @@ $(document).ready(function () {
       $(this).delay(150).animate({'opacity':'1'},600);
     }
   });
-  $('.stage .trigger').click(function () {
+  $('.trigger').click(function () {
     var stage = $(this).attr('stage');
     var path = $(this).attr('path');
     advanceStage(stage, path);
