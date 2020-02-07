@@ -24,7 +24,7 @@ function preLoad(num, path) {
   console.log(num + " " + path);
   var chosenPath = path;
   var randomNum = Math.floor(Math.random() * 2) + 1;
-  var alone = $('.alternate-title').text('Alone');
+  var alone = $('.alternate-title').text();
   console.log(alone);
   $('.stage-' + num + ' .random').css('display','none');
   $('.stage-' + num + ' .random[random-choice=' + randomNum + ']' ).css('display','inline');
