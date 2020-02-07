@@ -16,6 +16,9 @@ $(document).ready(function () {
 
 function preLoad(num, path) {
   console.log(num + " " + path);
+  var chosenPath = path;
+  $('.stage .option').css('display','none');
+  $('.stage .option[path-option=' + chosenPath ).css('display','inline');
 }
 
 function advanceStage(num , path) {
