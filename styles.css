@@ -112,7 +112,7 @@ footer a:hover {
 }
 /* Header Styles */
 nav {
-  padding: 0.5em;
+  padding: 0.5em 1em;
   display: inline-block;
   opacity: 0.5;
   transition-property: opacity;
@@ -125,6 +125,10 @@ nav {
 nav:hover {
   opacity: 1;
 }
+.title {
+  font-family: 'Reenie Beanie', 'Libre Baskerville', serif;
+  float: left;
+}
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -135,8 +139,6 @@ nav ul {
 nav li {
   float: left;
   margin-right: 20px;
-  margin-top: 8px;
-  margin-bottom: 8px;
 }
 nav li a {
   font-family: 'Libre Baskerville', times, serif;
