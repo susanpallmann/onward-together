@@ -39,6 +39,7 @@ function preLoad(num, path) {
     }
     $('.stage-' + num + ' .random').css('display','none');
     $('.stage-' + num + ' .random[random-choice=' + randomNum + ']' ).css('display','inline');
+    console.log("this ran and random choice is " + randomNum);
   }
 }
 function advanceStage(num , path) {
