@@ -20,16 +20,17 @@ body {
   letter-spacing: 0.15em;
   font-weight: 600;
   opacity: 0.8;
-  transition-property: background-color, opacity;
+  transition-property: background-color, opacity, letter-spacing;
   transition-duration: .2s;
   transition-timing-function: linear;
-  -webkit-transition-property: background-color, opacity;
+  -webkit-transition-property: background-color, opacity, letter-spacing;
   -webkit-transition-duration: .2s;
   -webkit-transition-timing-function: linear; 
 }
 .button:hover {
   background-color: rgba(255,255,255,0.15);
   opacity: 1;
+  letter-spacing: 0.3em;
 }
 p {
   margin-bottom: 3em;
