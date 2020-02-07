@@ -7,14 +7,21 @@ $(document).ready(function () {
       $(this).delay(150).animate({'opacity':'1'},600);
     }
   });
-  advanceStage(2);
+  $('.stage .button').click(function () {
+    var stage = $(this).attr('stage');
+    var path = $(this).attr('path');
+    advanceStage(stage, path);
+  });
 });
 
-function preLoad(num) {
+function preLoad(num, path) {
+  console.log(num + " " + path);
 }
 
-function advanceStage(num) {
+function advanceStage(num , path) {
   var newNumber = num;
+  var chosenPath = path;
   $('.visible').removeClass('visible');
+  preLoad(newNumber , chosenPath);
   $('.stage-' + newNumber).addClass('visible');
 }
