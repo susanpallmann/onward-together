@@ -17,8 +17,11 @@ $(document).ready(function () {
 function preLoad(num, path) {
   console.log(num + " " + path);
   var chosenPath = path;
-  $('.stage .option').css('display','none');
-  $('.stage .option[path-option=' + chosenPath ).css('display','inline');
+  var randomNum = Math.floor(Math.random() * 2) + 1;
+  $('.stage-' + num + ' .random').css('display','none');
+  $('.stage-' + num + ' .random[random-choice=' + randomNum).css('display','inline');
+  $('.stage-' + num + ' .option').css('display','none');
+  $('.stage-' + num + ' .option[path-option=' + chosenPath ).css('display','inline');
 }
 
 function advanceStage(num , path) {
