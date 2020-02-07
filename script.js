@@ -22,7 +22,7 @@ $(document).ready(function () {
 function preLoad(num, path) {
   console.log(num + " " + path);
   var chosenPath = path;
-  if (chosenPath === "A" || chosenPath === "B") {
+  if (chosenPath === "A" || chosenPath === "B" || chosenPath === "C" || chosenPath === "D") {
     $('.stage-' + num + ' .option').css('display','none');
     $('.stage-' + num + ' .option[path-option=' + chosenPath + ']' ).css('display','inline');
   } else if (chosenPath === "O") {
