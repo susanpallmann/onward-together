@@ -1,11 +1,13 @@
 /* Stage Progression Functionality */
-.stage {
+main .container.stage {
   opacity: 0;
   height: 0;
+  margin-bottom: 0;
 }
-.stage.visible {
+main .container.stage.visible {
   opacity: 1;
   height: auto;
+  margin-bottom: 5em;
 }
 /* Basic Style Initialization */
 body {
