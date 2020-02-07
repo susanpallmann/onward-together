@@ -3,7 +3,7 @@ $(document).ready(function () {
     var fadeLocation = $(this).offset().top + 0.25*($(window).height());
     var windowBottom = $(window).scrollTop() + $(window).height();
     /* If the object is visible in the window, fade in */
-    if( windowBottom > fadeLocation ){
+    if ( windowBottom > fadeLocation ) {
       $(this).delay(150).animate({'opacity':'1'},600);
     }
   });
@@ -26,7 +26,7 @@ function preLoad(num, path) {
   if (chosenPath === "A" || "B") {
     $('.stage-' + num + ' .option').css('display','none');
     $('.stage-' + num + ' .option[path-option=' + chosenPath + ']' ).css('display','inline');
-  if (chosenPath === "O") {
+  } else if (chosenPath === "O") {
     var randomNum = Math.floor(Math.random() * 2) + 1;
     var alone = $('.alternate-title').text() === "Alone";
     console.log(alone);
@@ -41,7 +41,6 @@ function preLoad(num, path) {
     $('.stage-' + num + ' .random[random-choice=' + randomNum + ']' ).css('display','inline');
   }
 }
-
 function advanceStage(num , path) {
   var newNumber = num;
   var chosenPath = path;
