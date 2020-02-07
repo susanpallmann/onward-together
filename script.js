@@ -26,8 +26,7 @@ function preLoad(num, path) {
   if (chosenPath === "A" || chosenPath === "B") {
     $('.stage-' + num + ' .option').css('display','none');
     $('.stage-' + num + ' .option[path-option=' + chosenPath + ']' ).css('display','inline');
-  }
-  if (chosenPath === "O") {
+  } else if (chosenPath === "O") {
     var randomNum = Math.floor(Math.random() * 2) + 1;
     var alone = $('.alternate-title').text() === "Alone";
     console.log(alone);
