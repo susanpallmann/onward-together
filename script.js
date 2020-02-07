@@ -7,4 +7,14 @@ $(document).ready(function () {
       $(this).delay(150).animate({'opacity':'1'},600);
     }
   });
+  advanceStage(2);
 });
+
+function preLoad(num) {
+}
+
+function advanceStage(num) {
+  var newNumber = num;
+  $('.visible').removeClass('visible');
+  $('.stage-' + newNumber).addClass('visible');
+}
