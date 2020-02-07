@@ -19,7 +19,6 @@ $(document).ready(function () {
     $('.alternate-title').html('Together');
   });
 });
-
 function preLoad(num, path) {
   console.log(num + " " + path);
   var chosenPath = path;
