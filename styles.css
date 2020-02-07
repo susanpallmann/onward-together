@@ -10,10 +10,10 @@ main .container.stage.visible {
   height: auto;
   margin-bottom: 5em;
   transition-property: opacity;
-  transition-duration: .2s;
+  transition-duration: .6s;
   transition-timing-function: linear;
   -webkit-transition-property: opacity;
-  -webkit-transition-duration: .2s;
+  -webkit-transition-duration: .6s;
   -webkit-transition-timing-function: linear; 
 }
 /* Basic Style Initialization */
