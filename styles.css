@@ -70,10 +70,11 @@ a {
   opacity: 0.5;
 }
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
+  background-color: #000000;
 }
 footer p {
   margin: 0.5em;
