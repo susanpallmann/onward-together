@@ -11,6 +11,25 @@
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCnyOhrX95loLl0YiwK3xHkaeEepqfF-Ow",
+        authDomain: "onward-together.firebaseapp.com",
+        databaseURL: "https://onward-together.firebaseio.com",
+        projectId: "onward-together",
+        storageBucket: "onward-together.appspot.com",
+        messagingSenderId: "48345201867",
+        appId: "1:48345201867:web:6fb2206eb1fdcbefe92f4e"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <header>
       <nav>
         <div class="title">
