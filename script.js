@@ -54,12 +54,8 @@ function advanceStage(num , path) {
   var newNumber = num;
   var chosenPath = path;
   $('.visible').removeClass('visible');
-  $('#body-container').css('background-color','rgba(0,0,0,1)');
   $('body').css('background-image','none');
   preLoad(newNumber , chosenPath);
   setBackground(newNumber , chosenPath);
-  setTimeout(function() {
-    $('#body-container').css('background-color','rgba(0,0,0,0)');
-  }, 600);
   $('.stage-' + newNumber).addClass('visible');
 }
