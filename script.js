@@ -60,6 +60,6 @@ function advanceStage(num , path) {
   setBackground(newNumber , chosenPath);
   setTimeout(function() {
     $('#body-container').css('background-color','rgba(0,0,0,0)');
-  }, 2000);
+  }, 600);
   $('.stage-' + newNumber).addClass('visible');
 }
