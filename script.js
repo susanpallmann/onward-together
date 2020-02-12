@@ -44,7 +44,7 @@ function preLoad(num, path) {
 function setBackground(num, path) {
   var newNumber = num;
   var chosenPath = path;
-  if ( $('.stage-' + newNumber).hasClass('.background-change') ) {
+  if ( $('.stage-' + newNumber).hasClass('background-change') ) {
     $('body').css('background-image','url(stage-"' + newNumber + chosenPath + '.gif")');
   }
 }
