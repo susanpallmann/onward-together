@@ -46,7 +46,7 @@ function setBackground(num, path) {
   var chosenPath = path;
   if ( $('.stage-' + newNumber).hasClass('background-change') ) {
     console.log('if statement triggered');
-    $('body').css('background-image','url(stage-"' + newNumber + chosenPath + '.gif")');
+    $('body').css('background-image','url("stage-' + newNumber + chosenPath + '.gif")');
   }
   console.log('setbackground function triggered');
 }
