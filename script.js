@@ -41,10 +41,21 @@ function preLoad(num, path) {
     console.log("this ran and random choice is " + randomNum);
   }
 }
+function setBackground(num, path) {
+  var newNumber = num;
+  var chosenPath = path;
+  if ( $('.stage-' + newNumber).hasClass('.background-change') ) {
+    $('body').css('background-image','url(stage"' + newNumber + chosenPath + '.gif")');
+  }
+}
 function advanceStage(num , path) {
   var newNumber = num;
   var chosenPath = path;
   $('.visible').removeClass('visible');
+  $('#body-container').css('opacity','1');
+  $('body').css('background-image','none');
   preLoad(newNumber , chosenPath);
+  setBackground(newNumber , chosenPath);
+  $('#body-container').css('opacity','0');
   $('.stage-' + newNumber).addClass('visible');
 }
