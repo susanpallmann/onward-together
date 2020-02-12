@@ -58,6 +58,8 @@ function advanceStage(num , path) {
   $('body').css('background-image','none');
   preLoad(newNumber , chosenPath);
   setBackground(newNumber , chosenPath);
-  $('#body-container').css('background-color','rgba(0,0,0,0)');
+  setTimeout(function() {
+    $('#body-container').css('background-color','rgba(0,0,0,0)');
+  }, 2000);
   $('.stage-' + newNumber).addClass('visible');
 }
