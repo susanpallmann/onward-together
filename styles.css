@@ -27,6 +27,18 @@ body {
   background-position-x: center;
   background-repeat: no-repeat;
 }
+#body-container {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition-property: opacity;
+  transition-duration: .6s;
+  transition-timing-function: linear;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: .6s;
+  -webkit-transition-timing-function: linear; 
+}
 .button {
   border: 2px solid #ffffff;
   padding: 1em 2em;
