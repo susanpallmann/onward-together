@@ -72,6 +72,11 @@ p {
   margin-bottom: 3em;
   line-height: 1.75em;
 }
+p.continue {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
+}
 h1 {
   font-family: 'Reenie Beanie', 'Libre Baskerville', serif;
   font-size: 4em;
