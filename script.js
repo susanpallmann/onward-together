@@ -45,7 +45,7 @@ function setBackground(num, path) {
   var newNumber = num;
   var chosenPath = path;
   if ( $('.stage-' + newNumber).hasClass('.background-change') ) {
-    $('body').css('background-image','url(stage"' + newNumber + chosenPath + '.gif")');
+    $('body').css('background-image','url(stage-"' + newNumber + chosenPath + '.gif")');
   }
 }
 function advanceStage(num , path) {
