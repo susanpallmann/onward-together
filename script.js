@@ -98,7 +98,7 @@ function newPath( id , username ) {
   var timestamp = currentDate.getTime();
   values.username = username;
   values.timestamp = timestamp;
-  var pathRef = firebase.database().ref('paths/' + id + '/');
+  var pathRef = firebase.database().ref('paths/' + id);
   var newChildRef = pathRef.push();
   var key = newChildRef.getKey();
   pathRef.child(key).setValue(username);
