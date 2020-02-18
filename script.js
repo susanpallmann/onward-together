@@ -1,6 +1,6 @@
 $(document).ready(function () {
   /* I'm sorry, I really need a global variable, I know it's not cool :(. */
-  userPath = [];
+  userPath = [0,0,0,0,0];
   $('.animate-fade-in').each( function(i){
     var fadeLocation = $(this).offset().top + 0.25*($(window).height());
     var windowBottom = $(window).scrollTop() + $(window).height();
@@ -12,6 +12,9 @@ $(document).ready(function () {
   $('.trigger').click(function () {
     var stage = $(this).attr('stage');
     var path = $(this).attr('path');
+    var place = $(this).attr('place');
+    var choice = $(this).attr('choice');
+    editPath(place, choice);
     advanceStage(stage, path);
   });
   $('.alone').click(function () {
@@ -41,6 +44,10 @@ function preLoad(num, path) {
     $('.stage-' + num + ' .random').css('display','none');
     $('.stage-' + num + ' .random[random-choice=' + randomNum + ']' ).css('display','inline');
     console.log("this ran and random choice is " + randomNum);
+    if (userPath[0] === 0) {
+      editPath(0, randomNum);
+      console.log('the user path for slot 0 is being set to ' + randomNum);
+    }
   }
 }
 function setBackground(num, path) {
