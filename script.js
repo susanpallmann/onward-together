@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  /* I'm sorry, I really need a global variable, I know it's not cool :(. */
+  userPath = [];
   $('.animate-fade-in').each( function(i){
     var fadeLocation = $(this).offset().top + 0.25*($(window).height());
     var windowBottom = $(window).scrollTop() + $(window).height();
@@ -58,4 +60,37 @@ function advanceStage(num , path) {
   preLoad(newNumber , chosenPath);
   setBackground(newNumber , chosenPath);
   $('.stage-' + newNumber).addClass('visible');
+}
+
+// Edits the userPath variable with the choice made, filling in 1 of 5 digits.
+function editPath (place, choice) {
+  place = place;
+  choice = choice;
+  userPath[place] = choice;
+}
+
+// Puts the path together to form the full ID, then calls the newPath function when done.
+function readyPath () {
+  username = $('#username').val();
+  id = userPath.join("");
+  newPath( id , username );
+}
+
+// Submits the new path to the database.
+function newPath( id , username ) {
+  var values = {
+    "username": "Anonymous",
+    "timestamp": "Error"
+  }
+  var username = username;
+  var id = id;
+  var currentDate = new Date();
+  var timestamp = currentDate.getTime();
+  values.username = username;
+  values.timestamp = timestamp;
+  var pathRef = firebase.database().ref('paths/' + id + '/');
+  var newChildRef = pathRef.push();
+  var key = newChildRef.getKey();
+  pathRef.child(key).setValue(username).push(values);
+  });
 }
