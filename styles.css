@@ -114,6 +114,18 @@ footer p:hover {
 footer a:hover {
   text-decoration: underline;
 }
+/* Forms & Data Vis */
+#username {
+  color: #ffffff;
+  background-color: #222222;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 1.5em;
+  font-family: 'Reenie Beanie', 'Libre Baskerville', serif;
+  font-size: 2.5em;
+  padding-left: 0.2em;
+  line-height: 0;
+}
 /* Bootstrap Add-Ons */
 .hybrid-row p {
   display: inline-block;
