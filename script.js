@@ -101,6 +101,5 @@ function newPath( id , username ) {
   var pathRef = firebase.database().ref('paths/' + id);
   var newChildRef = pathRef.push();
   var key = newChildRef.getKey();
-  pathRef.child(key).setValue(username);
   pathRef.child(key).push(values);
 }
