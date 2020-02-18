@@ -102,5 +102,4 @@ function newPath( id , username ) {
   var newChildRef = pathRef.push();
   var key = newChildRef.getKey();
   pathRef.child(key).setValue(username).push(values);
-  });
 }
