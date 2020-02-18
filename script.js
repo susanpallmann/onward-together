@@ -9,6 +9,9 @@ $(document).ready(function () {
       $(this).delay(150).animate({'opacity':'1'},600);
     }
   });
+  $('#submit-path').click(function () {
+    readyPath();
+  });
   $('.trigger').click(function () {
     var stage = $(this).attr('stage');
     var path = $(this).attr('path');
