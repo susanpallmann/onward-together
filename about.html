@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Onward Together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="discount-bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Reenie+Beanie&display=swap&subset=latin-ext" rel="stylesheet"> 
+    <noscript><link rel="stylesheet" type="text/css" href="no-script.css"></noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body style="background-image:url('images/stage-1.gif');">
+  <div id="body-container">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCnyOhrX95loLl0YiwK3xHkaeEepqfF-Ow",
+        authDomain: "onward-together.firebaseapp.com",
+        databaseURL: "https://onward-together.firebaseio.com",
+        projectId: "onward-together",
+        storageBucket: "onward-together.appspot.com",
+        messagingSenderId: "48345201867",
+        appId: "1:48345201867:web:6fb2206eb1fdcbefe92f4e"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      
+      // Get a reference to the database service
+      var database = firebase.database();
+    </script>
+    <header>
+      <nav>
+        <div class="title">
+          Onward <span class="alternate-title">Together</span> |
+        </div>
+        <ul>
+          <li><a href="" target="_self">Home</a></li>
+          <li><a href="" target="_self">About</a></li>
+         </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container stage stage-1 visible background-change">
+        <div class="row">
+          <div class="column span12 animate-fade-in">
+            <h1>About</h1>
+            <p>
+              Some basic information about the website here to introduce the project and what it's for.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <script type="text/javascript" src="script.js"></script>
+      <p>© 2020 <a href="http://www.susanpallmanndesign.com" target="_blank">Susan Pallmann</a> All Rights Reserved | <a href="privacy.html" target="_self">Privacy</a></p>   
+    </footer>
+  </div>
+  </body>
+</html>
