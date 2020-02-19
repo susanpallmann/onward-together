@@ -129,8 +129,8 @@ function gatherIds () {
 function updateCounters(item, index) {
   dbLocation = item;
   console.log(dbLocation);
-  var pathRef = firebase.database().ref('counters/' + location);
-  var countRef = firebase.database().ref('counters/' + location + '/count');
+  var pathRef = firebase.database().ref('counters/' + dbLocation);
+  var countRef = firebase.database().ref('counters/' + dbLocation + '/count');
   var anotherCount;
   var loadCount = countRef.once('value').then(function(snapshot) {
     console.log(snapshot.val());
