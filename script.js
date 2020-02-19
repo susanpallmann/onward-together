@@ -35,9 +35,7 @@ function preLoad(num, path) {
     $('.stage-' + num + ' .option').css('display','none');
     $('.stage-' + num + ' .option[path-option=' + chosenPath + ']' ).css('display','inline');
   } else if (chosenPath === "O") {
-    var randomNum = Math.floor(Math.random() * 2) + 1;
     var alone = $('.alternate-title').text() === "Alone";
-    console.log(alone);
     if ( $('.alternate-title').text() === "Alone" ) {
       $('.stage-' + num + ' .option').css('display','none');
       $('.stage-' + num + ' .option[path-option=A]' ).css('display','inline');
@@ -46,9 +44,10 @@ function preLoad(num, path) {
       $('.stage-' + num + ' .option[path-option=B]' ).css('display','inline');
     }
     $('.stage-' + num + ' .random').css('display','none');
-    $('.stage-' + num + ' .random[random-choice=' + randomNum + ']' ).css('display','inline');
-    console.log("this ran and random choice is " + randomNum);
+    $('.stage-' + num + ' .random[random-choice=' + userPath[0] + ']' ).css('display','inline');
+    console.log("this ran and random choice is " + userPath[0]);
     if (userPath[0] === 0) {
+      var randomNum = Math.floor(Math.random() * 2) + 1;
       editPath(0, randomNum);
       console.log('the user path for slot 0 is being set to ' + randomNum);
     }
