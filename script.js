@@ -48,8 +48,8 @@ function preLoad(num, path) {
 
     if (userPath[0] === 0) {
       var randomNum = Math.floor(Math.random() * 2) + 1;
-      console.log("this ran and random choice is " + userPath[0]);
       editPath(0, randomNum);
+      console.log("this ran and random choice is " + userPath[0]);
       console.log('the user path for slot 0 is being set to ' + randomNum);
     }
   }
@@ -170,10 +170,10 @@ function loadPartner (num) {
   if ( partner === "yes" ) {
     var partnerPath = userPath;
     var first = num.toString(userPath[0]);
-    if (first === "1") {
-      partnerPath[0] = "2";
+    if (first === 1) {
+      partnerPath[0] = 2;
     } else {
-      partnerPath[0] = "1";
+      partnerPath[0] = 1;
     }
     var partnerId = partnerPath.join("");
     var partnerName;
