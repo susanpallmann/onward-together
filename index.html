@@ -86,6 +86,7 @@
       <div class="container stage stage-3">
         <div class="row">
           <div class="column span6">
+            <span class="server-random" random-max="3">
             <h1>Echo Cliffs</h1>
             <p>
               <span class="random" random-choice="1">
@@ -96,11 +97,10 @@
               </span>
               <span class="random" random-choice="2">
                 <span class="option" path-option="A">
-                  You find yourself lost. Suddenly you hear a faint call through the fog. <span class="server-load">Load!Text</span>.
+                  You find yourself lost. Suddenly you hear a faint call through the fog. <span class="server-load random-option" random-option="1">Load!Text</span><span class="server-load random-option" random-option="2">Load!Text</span><span class="server-load random-option" random-option="3">Load!Text</span>.
                 </span>
                 <span class="option" path-option="B">
-                  You are unable to find your partner. Suddenly you hear a faint call through the fog. <span class="server-load">Load!Text
-                  </span>. You check your map and call back.
+                  You are unable to find your partner. Suddenly you hear a faint call through the fog. <span class="server-load random-option" random-option="1">Load!Text</span><span class="server-load random-option" random-option="2">Load!Text</span><span class="server-load random-option" random-option="3">Load!Text</span>.. You check your map and call back.
                 </span>
               </span>
             </p>
@@ -122,7 +122,7 @@
               </span>
               <span class="random" random-choice="2">
                 <span class="option" path-option="A">
-                  <span class="button trigger" stage="4" path="B" place="2" choice="1"><span class="server-load">Load!Text</span></span>
+                  <span class="button trigger" stage="4" path="B" place="2" choice="1"><span class="server-load random-option" random-option="1">Load!Text</span><span class="server-load random-option" random-option="2">Load!Text</span><span class="server-load random-option" random-option="3">Load!Text</span>.</span>
                 </span>
                 <span class="option" path-option="B">
                   <span class="button trigger" stage="8" path="A" place="2" choice="1">Mushroom Forest</span>
@@ -131,6 +131,7 @@
                 </span>
               </span>
             </div>
+            </span>
           </div>
           <div class="column span6">
             <img src="images/image-1.gif" alt="">
