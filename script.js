@@ -180,7 +180,7 @@ function loadPartner (num) {
     var mostRecentRef = pathRef.orderByChild(partnerId + '/timestamp').limitToLast(1);
     mostRecentRef.once('value').then(function(snapshot) {
       var key = snapshot.key;
-      var childKey = snapshot.child("username").key;
+      var childKey = snapshot.child("username");
       console.log(key + " " + childKey);
     });
     
