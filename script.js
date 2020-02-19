@@ -103,3 +103,38 @@ function newPath( id , username ) {
   //var key = newChildRef.getKey();
   //pathRef.child(key).push(values);
 }
+
+function gatherIds () {
+  var id = userPath.join("");
+  var gatheredIds = [];
+  var choice1 = userPath[1];
+  var choice2 = userPath[2];
+  var choice3 = userPath[3];
+  var choice4 = userPath[4];
+  var string1 = '0' + choice1 + '000';
+  var string2 = '00' + choice2 + '00';
+  var string3 = '00' + choice2 + choice3 + '0';
+  var string4 = '0000' + choice4;
+  var pathRef = firebase.database().ref('counters/' + 'total');
+  var existingCount = parseInt(pathRef.once('count'));
+  var newCount = existingCount ++;
+  pathRef.set({
+    count: newCount
+  });
+  gatheredIds.push(id);
+  gatheredIds.push(string1);
+  gatheredIds.push(string2);
+  gatheredIds.push(string3);
+  gatheredIds.push(string4);
+  gatheredIds.forEach(updateCounters);
+}
+
+function updateCounters(item, index) {
+  location = item;
+  var pathRef = firebase.database().ref('counters/' + location);
+  var existingCount = parseInt(pathRef.once('count'));
+  var newCount = existingCount ++;
+  pathRef.set({
+    count: newCount
+  });
+}
