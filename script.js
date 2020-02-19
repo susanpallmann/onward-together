@@ -134,8 +134,8 @@ function updateCounters(item, index) {
   countRef.once('value').then(function(snapshot) {
     var anotherCount = snapshot.val();
     var existingCount = parseInt(anotherCount);
-    console.log(anotherCount + " " + existingCount);
-    var newCount = existingCount ++;
+    var newCount = existingCount++;
+    console.log(newCount);
     pathRef.set({ count: newCount});
   });
 }
