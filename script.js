@@ -54,6 +54,19 @@ function preLoad(num, path) {
     }
   }
 }
+function serverPreLoad (num, path) {
+  var newNumber = num;
+  var chosenPath = path;
+  var newStage = $('.stage-' + newNumber);
+  var stageRandoms = newStage.find('.server-random');
+  stageRandoms.each(function( index ) {
+    max = $(this).attr('random-max');
+    randomNum = Math.floor(Math.random() * max) + 1;
+    console.log(max + " " + randomNum);
+    $(this).find('.random-option').css('display','none');
+    $(this).find('.random-option[random-option=' + randomNum + ']').css('display','inline');
+  });
+}
 function setBackground(num, path) {
   var newNumber = num;
   var chosenPath = path;
@@ -69,6 +82,7 @@ function advanceStage(num , path) {
   $('.visible').removeClass('visible');
   $('body').css('background-image','none');
   preLoad(newNumber , chosenPath);
+  serverPreLoad(newNumber , chosenPath);
   setBackground(newNumber , chosenPath);
   $('.stage-' + newNumber).addClass('visible');
 }
