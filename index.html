@@ -115,9 +115,9 @@
                   <span class="button trigger" stage="4" path="A" place="2" choice="3">Is anyone out there?</span>
                 </span>
                 <span class="option" path-option="B">
-                  <span class="button trigger" stage="7" path="A" place="2" choice="1">Where do I go?</span>
-                  <span class="button trigger" stage="7" path="B" place="2" choice="2">I’m lost!</span>
-                  <span class="button trigger" stage="7" path="C" place="2" choice="3">Is anyone out there?</span>
+                  <span class="button trigger" stage="7" path="O" place="2" choice="1">Where do I go?</span>
+                  <span class="button trigger" stage="7" path="O" place="2" choice="2">I’m lost!</span>
+                  <span class="button trigger" stage="7" path="O" place="2" choice="3">Is anyone out there?</span>
                 </span>
               </span>
               <span class="random" random-choice="2">
@@ -141,9 +141,10 @@
       <div class="container stage stage-4 trigger" stage="5" path="O">
         <div class="row">
           <div class="column span6">
+            <span class="server-random" random-max="3">
             <h1>Echo Cliffs</h1>
             <p>
-              <span class="option" path-option="A">You hear a faint call back through the fog. <span class="server-load">Load!Text</span> You 
+              <span class="option" path-option="A">You hear a faint call back through the fog. <span class="server-load random-option" random-option="1">Load!Text</span><span class="server-load random-option" random-option="2">Load!Text</span><span class="server-load random-option" random-option="3">Load!Text</span> You 
                 can’t tell if what you heard was an echo or another solitary traveler,</span><span class="option" path-option="B"> You listen,
                but no further sound emerges from the mountains ahead. You begin to wonder if you imagined the whole thing,</span> so you 
               decide to continue on, into the mist.
@@ -153,6 +154,7 @@
                 <span class="dim">click to continue</span>
               </p>
             </div>
+            </span>
           </div>
           <div class="column span6">
             <img src="images/stage-4A.gif" alt="">
@@ -197,25 +199,21 @@
       <div class="container stage stage-7">
         <div class="row">
           <div class="column span6">
+            <span class="server-random" random-max="3">
             <h1>Echo Cliffs</h1>
             <p>
-              You hear a faint call back through the fog. <span class="server-load">Load!Text</span>. Perhaps it was your partner! And at 
+              You hear a faint call back through the fog. <span class="server-load random-option" random-option="1">Load!Text</span><span class="server-load random-option" random-option="2">Load!Text</span><span class="server-load random-option" random-option="3">Load!Text</span>. Perhaps it was your partner! And at 
               any rate, some direction is better than none.
             </p>
             <p>
               You call back at the foreboding mist, newly reassured.
             </p>
             <div class="button-container">
-              <span class="option" path-option="A">
-                <span class="button trigger" stage="8" path="A" place="2" choice="1">I'll meet you there!</span>
-              </span>
-              <span class="option" path-option="B">
-                <span class="button trigger" stage="8" path="B" place="2" choice="2">I'll meet you there!</span>
-              </span>
-              <span class="option" path-option="C">
-                <span class="button trigger" stage="8" path="C" place="2" choice="3">I'll meet you there!</span>
-              </span>
+                <span class="button trigger" stage="8" path="A" place="2" choice="1"><span class="server-load random-option" random-option="1">I'll meet you there!</span></span>
+                <span class="button trigger" stage="8" path="B" place="2" choice="2"><span class="server-load random-option" random-option="1">I'll meet you there!</span></span>
+                <span class="button trigger" stage="8" path="C" place="2" choice="3"><span class="server-load random-option" random-option="1">I'll meet you there!</span></span>
             </div>
+            </span>
           </div>
           <div class="column span6">
             <img src="images/stage-4A.gif" alt="">
