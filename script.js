@@ -11,6 +11,7 @@ $(document).ready(function () {
   });
   $('#submit-path').click(function () {
     readyPath();
+    gatherIds();
   });
   $('.trigger').click(function () {
     var stage = $(this).attr('stage');
