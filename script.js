@@ -131,12 +131,12 @@ function updateCounters(item, index) {
   console.log(dbLocation);
   var pathRef = firebase.database().ref('counters/' + dbLocation);
   var countRef = firebase.database().ref('counters/' + dbLocation + '/count');
-  var anotherCount = countRef.once('value').then(function(snapshot) {
-    return snapshot.val();
+  countRef.once('value').then(function(snapshot) {
+    var anotherCount = snapshot.val();
+    var existingCount = parseInt(anotherCount);
+    console.log(anotherCount + " " + existingCount);
+    var newCount = existingCount ++;
   });
-  var existingCount = parseInt(anotherCount);
-  console.log(anotherCount + " " + existingCount);
-  var newCount = existingCount ++;
-  pathRef.set({ count: newCount});
+  //pathRef.set({ count: newCount});
 }
 // Stupid errors
