@@ -179,11 +179,9 @@ function loadPartner (num) {
     var partnerName;
     var pathRef = firebase.database().ref('paths/' + partnerId + '/');
     console.log(partnerId);
-    var ref = pathRef.orderByChild("timestamp").limitToLast(1);
-    ref.once('value').then(function(snapshot) {
+    var ref = firebase.database().ref('paths/' + partnerId + '/');
+    ref.orderByChild("timestamp").limitToLast(1).on("child_added", function(snapshot) {
       partnerName = snapshot.val().username;
-      console.log(snapshot.val().username);
-      console.log(partnerName);
       $('.partner').text(partnerName);
     });
   }
