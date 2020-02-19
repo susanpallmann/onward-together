@@ -113,8 +113,8 @@ function gatherIds () {
   var choice3 = userPath[3];
   var choice4 = userPath[4];
   var string1 = '0' + choice1 + '000';
-  var string2 = '00' + choice2 + '00';
-  var string3 = '00' + choice2 + choice3 + '0';
+  var string2 = '0' + choice1 + choice2 + '00';
+  var string3 = '000' + choice3 + '0';
   var string4 = '0000' + choice4;
   var pathRef = firebase.database().ref('counters/' + 'total');
   gatheredIds.push(id);
