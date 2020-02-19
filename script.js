@@ -133,7 +133,9 @@ function gatherIds () {
 function updateCounters(item, index) {
   location = item;
   var pathRef = firebase.database().ref('counters/' + location);
-  var existingCount = parseInt(pathRef.once('count'));
+  var existingCount = pathRef.once('value').then(function(snapshot) {
+  });
+  var existingCount = parseInt(existingCount);
   var newCount = existingCount ++;
   pathRef.set({
     count: newCount
