@@ -183,7 +183,6 @@ function loadPartner (num) {
     ref.once('value').then(function(snapshot) {
       partnerName = snapshot.val().username;
       console.log(snapshot.val().username);
-      console.log(snapshot.val().'username');
       console.log(partnerName);
       $('.partner').text(partnerName);
     });
