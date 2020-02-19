@@ -117,11 +117,6 @@ function gatherIds () {
   var string3 = '00' + choice2 + choice3 + '0';
   var string4 = '0000' + choice4;
   var pathRef = firebase.database().ref('counters/' + 'total');
-  var existingCount = parseInt(pathRef.once('count'));
-  var newCount = existingCount ++;
-  pathRef.set({
-    count: newCount
-  });
   gatheredIds.push(id);
   gatheredIds.push(string1);
   gatheredIds.push(string2);
