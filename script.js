@@ -136,6 +136,7 @@ function updateCounters(item, index) {
     console.log('count.val()', count.val());
   }, function (error) {
     console.log("Error");
+    console.log('count.val()', count.val());
   });  
   //var existingCount = parseInt(anotherCount);
   //var newCount = existingCount ++;
