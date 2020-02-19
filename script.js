@@ -96,6 +96,7 @@ function advanceStage(num , path) {
   preLoad(newNumber , chosenPath);
   serverPreLoad(newNumber , chosenPath);
   serverInfoPreLoad(newNumber , chosenPath);
+  loadPartner(newNumber);
   setBackground(newNumber , chosenPath);
   $('.stage-' + newNumber).addClass('visible');
 }
@@ -162,5 +163,21 @@ function updateCounters(item, index) {
     console.log(newCount);
     pathRef.set({ count: newCount});
   });
+}
+function loadPartner (num) {
+  var newNumber = num;
+  var partner = $('.stage-' + newNumber).attr('partner');
+  if ( partner === "yes" ) {
+    var partnerPath = userPath;
+    var first = userPath[0];
+    if (first === "1") {
+      partnerPath[0] = "2";
+    } else {
+      partnerPath[0] = "1";
+    }
+    var partnerId = partnerPath.join("");
+    var pathRef = firebase.database().ref('paths/' + partnerId);
+    var mostRecentRef = pathRef.orderByChild('timestamp').limitToLast();
+  }
 }
 // Stupid errors
