@@ -182,10 +182,8 @@ function loadPartner (num) {
     var ref = pathRef.orderByChild("timestamp").limitToLast(1);
     ref.once('value').then(function(snapshot) {
       partnerName = snapshot.val().username;
-      console.log(snapshot.child(username));
-      console.log(snapshot.child('username'));
-      console.log(snapshot.child(username).val());
-      console.log(snapshot.child('username').val());
+      console.log(snapshot.val().username);
+      console.log(snapshot.val().'username');
       console.log(partnerName);
       $('.partner').text(partnerName);
     });
