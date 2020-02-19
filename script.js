@@ -67,6 +67,18 @@ function serverPreLoad (num, path) {
     $(this).find('.random-option[random-option=' + randomNum + ']').css('display','inline');
   });
 }
+function serverInfoPreLoad (num, path) {
+  var newNumber = num;
+  var chosenPath = path;
+  var newStage = $('.stage-' + newNumber);
+  var stageLoadInfos = newStage.find('.server-load-info');
+  stageLoadInfos.each(function( index ) {
+    var reqPlace = $(this).attr('req-place');
+    var specificPath = userPath[reqPlace];
+    $(this).find('.info-option').css('display','none');
+    $(this).find('.info-option[server-choice=' + specificPath + ']').css('display','inline');
+  });
+}
 function setBackground(num, path) {
   var newNumber = num;
   var chosenPath = path;
@@ -83,6 +95,7 @@ function advanceStage(num , path) {
   $('body').css('background-image','none');
   preLoad(newNumber , chosenPath);
   serverPreLoad(newNumber , chosenPath);
+  serverInfoPreLoad(newNumber , chosenPath);
   setBackground(newNumber , chosenPath);
   $('.stage-' + newNumber).addClass('visible');
 }
