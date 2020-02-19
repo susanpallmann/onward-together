@@ -41,7 +41,7 @@
         <ul>
           <li><a href="" target="_self">Home</a></li>
           <li><a href="" target="_self">About</a></li>
-         </ul>
+        </ul>
       </nav>
     </header>
     <main>
@@ -58,8 +58,12 @@
               Will you go alone or together?
             </p>
             <div class="button-container">
-              <span class="button trigger alone" stage="2" path="A" place="1" choice="1">Alone</span>
-              <span class="button trigger together" stage="2" path="B" place="1" choice="2">Together</span>
+              <span class="button trigger alone" stage="2" path="A" place="1" choice="1">
+                Alone
+              </span>
+              <span class="button trigger together" stage="2" path="B" place="1" choice="2">
+                Together
+              </span>
             </div>
           </div>
         </div>
@@ -99,19 +103,44 @@
             <p>
               <span class="server-load-info" req-place="0">
                 <span class="server-load info-option" server-choice="1">
-                <span class="option" path-option="B">
-                  Although you came with a partner, you are briefly separated as the 
-                  two of you attempt to traverse the winding mountain paths.</span> You find yourself lost, and decide to call out in 
-                  case anyone is nearby.
-              </span>
-              <span class="server-load info-option" server-choice="2">
-                <span class="option" path-option="A">
-                  You find yourself lost. Suddenly you hear a faint call through the fog. "<span class="server-random" random-max="3"><span class="server-load random-option" random-option="1">Where do I go?</span><span class="server-load random-option" random-option="2">I’m lost!</span><span class="server-load random-option" random-option="3">Is anyone out there?</span></span>"
+                  <span class="option" path-option="B">
+                    Although you came with a partner, you are briefly separated as the 
+                    two of you attempt to traverse the winding mountain paths.
+                  </span>
+                  You find yourself lost, and decide to call out in case anyone is nearby.
                 </span>
-                <span class="option" path-option="B">
-                  You are unable to find your partner. Suddenly you hear a faint call through the fog. "<span class="server-random" random-max="3"><span class="server-load random-option" random-option="1">Where do I go?</span><span class="server-load random-option" random-option="2">I’m lost!</span><span class="server-load random-option" random-option="3">Is anyone out there?</span></span>" You check your map and call back.
+                <span class="server-load info-option" server-choice="2">
+                  <span class="option" path-option="A">
+                    You find yourself lost. Suddenly you hear a faint call through the fog. "
+                    <span class="server-random" random-max="3">
+                      <span class="server-load random-option" random-option="1">
+                        Where do I go?
+                      </span>
+                      <span class="server-load random-option" random-option="2">
+                        I’m lost!
+                      </span>
+                      <span class="server-load random-option" random-option="3">
+                        Is anyone out there?
+                      </span>
+                    </span>
+                    "
+                  </span>
+                  <span class="option" path-option="B">
+                    You are unable to find your partner. Suddenly you hear a faint call through the fog. "
+                    <span class="server-random" random-max="3">
+                      <span class="server-load random-option" random-option="1">
+                        Where do I go?
+                      </span>
+                      <span class="server-load random-option" random-option="2">
+                        I’m lost!
+                      </span>
+                      <span class="server-load random-option" random-option="3">
+                        Is anyone out there?
+                      </span>
+                    </span>
+                    " You check your map and call back.
+                  </span>
                 </span>
-              </span>
               </span>
             </p>
             <p>
@@ -119,39 +148,62 @@
             </p>
             <div class="button-container">
               <span class="server-load-info" req-place="0">
-              <span class="server-load info-option" server-choice="1">
-                <span class="option" path-option="A">
-                  <span class="button trigger" stage="4" path="A" place="2" choice="1">Where do I go?</span>
-                  <span class="button trigger" stage="4" path="A" place="2" choice="2">I’m lost!</span>
-                  <span class="button trigger" stage="4" path="A" place="2" choice="3">Is anyone out there?</span>
-                </span>
-                <span class="option" path-option="B">
-                  <span class="button trigger" stage="7" path="O" place="2" choice="1">Where do I go?</span>
-                  <span class="button trigger" stage="7" path="O" place="2" choice="2">I’m lost!</span>
-                  <span class="button trigger" stage="7" path="O" place="2" choice="3">Is anyone out there?</span>
-                </span>
-              </span>
-              <span class="server-load info-option" server-choice="2">
-                <span class="option" path-option="A">
-                  <span class="server-load random-option" random-option="1">
-                    <span class="button trigger" stage="4" path="A" place="2" choice="1">Where do I go?</span>
+                <span class="server-load info-option" server-choice="1">
+                  <span class="option" path-option="A">
+                    <span class="button trigger" stage="4" path="A" place="2" choice="1">
+                      Where do I go?
+                    </span>
+                    <span class="button trigger" stage="4" path="A" place="2" choice="2">
+                      I’m lost!
+                    </span>
+                    <span class="button trigger" stage="4" path="A" place="2" choice="3">
+                      Is anyone out there?
+                    </span>
                   </span>
-                  <span class="server-load random-option" random-option="2">
-                    <span class="button trigger" stage="4" path="B" place="2" choice="2">I'm lost!</span>
-                  </span>
-                  <span class="server-load random-option" random-option="3">
-                    <span class="button trigger" stage="4" path="C" place="2" choice="3">Is anyone out there?</span>
+                  <span class="option" path-option="B">
+                    <span class="button trigger" stage="7" path="O" place="2" choice="1">
+                      Where do I go?
+                    </span>
+                    <span class="button trigger" stage="7" path="O" place="2" choice="2">
+                      I’m lost!
+                    </span>
+                    <span class="button trigger" stage="7" path="O" place="2" choice="3">
+                      Is anyone out there?
+                    </span>
                   </span>
                 </span>
-                <span class="option" path-option="B">
-                  <span class="button trigger" stage="8" path="A" place="2" choice="1">Mushroom Forest</span>
-                  <span class="button trigger" stage="8" path="B" place="2" choice="2">Tunnel</span>
-                  <span class="button trigger" stage="8" path="C" place="2" choice="3">River</span>
+                <span class="server-load info-option" server-choice="2">
+                  <span class="option" path-option="A">
+                    <span class="server-load random-option" random-option="1">
+                      <span class="button trigger" stage="4" path="A" place="2" choice="1">
+                        Where do I go?
+                      </span>
+                    </span>
+                    <span class="server-load random-option" random-option="2">
+                      <span class="button trigger" stage="4" path="B" place="2" choice="2">
+                        I'm lost!
+                      </span>
+                    </span>
+                    <span class="server-load random-option" random-option="3">
+                      <span class="button trigger" stage="4" path="C" place="2" choice="3">
+                        Is anyone out there?
+                      </span>
+                    </span>
+                  </span>
+                  <span class="option" path-option="B">
+                    <span class="button trigger" stage="8" path="A" place="2" choice="1">
+                      Mushroom Forest
+                    </span>
+                    <span class="button trigger" stage="8" path="B" place="2" choice="2">
+                      Tunnel
+                    </span>
+                    <span class="button trigger" stage="8" path="C" place="2" choice="3">
+                      River
+                    </span>
+                  </span>
                 </span>
-              </span>
               </span>
             </div>
-            </span>
           </div>
           <div class="column span6">
             <img src="images/image-1.gif" alt="">
@@ -162,18 +214,31 @@
         <div class="row">
           <div class="column span6">
             <span class="server-random" random-max="3">
-            <h1>Echo Cliffs</h1>
-            <p>
-              <span class="option" path-option="A">You hear a faint call back through the fog. <span class="server-load random-option" random-option="1">"Where do I go?"</span><span class="server-load random-option" random-option="2">"I'm lost!"</span><span class="server-load random-option" random-option="3">"Is anyone out there?"</span> You 
-                can’t tell if what you heard was an echo or another solitary traveler,</span><span class="option" path-option="B"> You listen,
-               but no further sound emerges from the mountains ahead. You begin to wonder if you imagined the whole thing,</span> so you 
-              decide to continue on, into the mist.
-            </p>
-            <div class="button-container">
+              <h1>Echo Cliffs</h1>
               <p>
-                <span class="dim">click to continue</span>
+                <span class="option" path-option="A">
+                  You hear a faint call back through the fog. 
+                  <span class="server-load random-option" random-option="1">
+                    "Where do I go?"
+                  </span>
+                  <span class="server-load random-option" random-option="2">
+                    "I'm lost!"
+                  </span>
+                  <span class="server-load random-option" random-option="3">
+                    "Is anyone out there?"
+                  </span>
+                  You can’t tell if what you heard was an echo or another solitary traveler,
+                </span>
+                <span class="option" path-option="B">
+                  You listen, but no further sound emerges from the mountains ahead. You begin to wonder if you imagined the whole thing,
+                </span>
+                so you decide to continue on, into the mist.
               </p>
-            </div>
+              <div class="button-container">
+                <p>
+                  <span class="dim">click to continue</span>
+                </p>
+              </div>
             </span>
           </div>
           <div class="column span6">
@@ -220,24 +285,24 @@
         <div class="row">
           <div class="column span6">
             <span class="server-random" random-max="3">
-            <h1>Echo Cliffs</h1>
-            <p>
-              You hear a faint call back through the fog. "Head for the  
-              <span class="server-load random-option" random-option="1">
-                mushroom forest
-              </span>
-              <span class="server-load random-option" random-option="2">
-                crystal tunnel
-              </span>
-              <span class="server-load random-option" random-option="3">
-                wisp river
-              </span>." Perhaps it was your partner! And at 
-              any rate, some direction is better than none.
-            </p>
-            <p>
-              You call back at the foreboding mist, newly reassured.
-            </p>
-            <div class="button-container">
+              <h1>Echo Cliffs</h1>
+              <p>
+                You hear a faint call back through the fog. "Head for the  
+                <span class="server-load random-option" random-option="1">
+                  mushroom forest
+                </span>
+                <span class="server-load random-option" random-option="2">
+                  crystal tunnel
+                </span>
+                <span class="server-load random-option" random-option="3">
+                  wisp river
+                </span>." Perhaps it was your partner! And at 
+                any rate, some direction is better than none.
+              </p>
+              <p>
+                You call back at the foreboding mist, newly reassured.
+              </p>
+              <div class="button-container">
                 <span class="server-load random-option" random-option="1">
                   <span class="button trigger" stage="8" path="A" place="2" choice="1">
                     I'll meet you there!
@@ -253,7 +318,7 @@
                     I'll meet you there!
                   </span>
                 </span>
-            </div>
+              </div>
             </span>
           </div>
           <div class="column span6">
@@ -274,9 +339,17 @@
               <h1>Wisp River</h1>
             </span>
             <p>
-              You find your partner from before, and together you appreciate the beauty of the <span class="option" path-option="A">
-              mushroom forest</span><span class="option" path-option="B">crystal tunnel</span><span class="option" path-option="C">
-              wisp river</span> you’re traveling through as you continue on in your quest.
+              You find your partner from before, and together you appreciate the beauty of the 
+              <span class="option" path-option="A">
+                mushroom forest
+              </span>
+              <span class="option" path-option="B">
+                crystal tunnel
+              </span>
+              <span class="option" path-option="C">
+                wisp river
+              </span>
+              you’re traveling through as you continue on your quest.
             </p>
             <div class="button-container">
               <p>
@@ -311,8 +384,10 @@
             <h1>The Dungeon</h1>
             <p>
               As you sneak through the entrance, you misstep, making a loud sound that echoes through the halls ahead. You suddenly see 
-              two red eyes, belonging to a monster unlike anything you’ve ever seen. <span class="option" path-option="A">Does it look… 
-              familiar?</span>
+              two red eyes, belonging to a monster unlike anything you’ve ever seen. 
+              <span class="option" path-option="A">
+                Does it look… familiar?
+              </span>
             </p>
             <div class="button-container">
               <p>
@@ -333,8 +408,12 @@
               Do you help him?
             </p>
             <div class="button-container">
-              <span class="button trigger" stage="12" path="A" place="3" choice="2">Yes</span>
-              <span class="button trigger" stage="12" path="B" place="3" choice="1">No</span>
+              <span class="button trigger" stage="12" path="A" place="3" choice="2">
+                Yes
+              </span>
+              <span class="button trigger" stage="12" path="B" place="3" choice="1">
+                No
+              </span>
             </div>
           </div>
           <div class="column span6">
@@ -347,8 +426,12 @@
           <div class="column span12">
             <h1>The Dungeon</h1>
             <p>
-              <span class="option" path-option="A">The monster hesitates as you free him, but flees.</span>
-              <span class="option" path-option="B">The monster watches you leave, but you see sorrow in his eyes.</span>
+              <span class="option" path-option="A">
+                The monster hesitates as you free him, but flees.
+              </span>
+              <span class="option" path-option="B">
+                The monster watches you leave, but you see sorrow in his eyes.
+              </span>
             </p>
             <div class="button-container">
               <p>
@@ -384,8 +467,12 @@
               You are met once again with your first choice. Will you go alone or together?
             </p>
             <div class="button-container">
-              <span class="button trigger alone" stage="15" path="A" place="4" choice="1">Alone</span>
-              <span class="button trigger together" stage="15" path="B" place="4" choice="2">Together</span>
+              <span class="button trigger alone" stage="15" path="A" place="4" choice="1">
+                Alone
+              </span>
+              <span class="button trigger together" stage="15" path="B" place="4" choice="2">
+                Together
+              </span>
             </div>
           </div>
           <div class="column span6">
@@ -398,10 +485,15 @@
           <div class="column span12">
             <h1>Lava Bridge</h1>
             <p>
-              Working together, you reach the other side. <span class="option" path-option="A">You glance back in shame at your partner, 
-              leaving them behind. You</span><span class="option" path-option="B">You throw a rope to your partner. It takes much of your 
-              strength, but you hoist them up to join you just as the bridge falls. Together, you</span> continue on towards the highest 
-              tower, almost hidden in all the smoke coming from it.
+              Working together, you reach the other side. 
+              <span class="option" path-option="A">
+                You glance back in shame at your partner, leaving them behind. You
+              </span>
+              <span class="option" path-option="B">
+                You throw a rope to your partner. It takes much of your strength, but you hoist them up to join you just as the bridge 
+                falls. Together, you
+              </span>
+              continue on towards the highest tower, almost hidden in all the smoke coming from it.
             </p>
             <div class="button-container">
               <p>
@@ -458,10 +550,10 @@
               You think back to how you 
               <span class="server-load-info" req-place="1">
                 <span class="server-load info-option" server-choice="1">
-                  found yourself lost alone
+                  got lost alone
                 </span>
                 <span class="server-load info-option" server-choice="2">
-                  found help from a friend 
+                  found your way with a friend 
                 </span>
               </span>
               in the echo mountains.
@@ -482,10 +574,10 @@
           <div class="column span6">
             <h1>Flashback</h1>
             <p>
-              You even think back to the beast you encountered, and how you 
+              You even think back to the beast you encountered; how you 
               <span class="server-load-info" req-place="3">
                 <span class="server-load info-option" server-choice="1">
-                  took no mercy and abandoned 
+                  felt no mercy and abandoned 
                 </span>
                 <span class="server-load info-option" server-choice="2">
                   took pity on and freed 
@@ -543,8 +635,12 @@
           <div class="column span12">
             <h1>The Dragon</h1>
             <p>
-              <span class="option" path-option="B">Your companionship has paid off, and those you’ve helped are here to fight by your side. 
-              </span><span class="option" path-option="A">Perhaps if you had not come alone you might have prevailed.</span>
+              <span class="option" path-option="B">
+                Your companionship has paid off, and those you’ve helped are here to fight by your side. 
+              </span>
+              <span class="option" path-option="A">
+                Perhaps if you had not come alone you might have prevailed.
+              </span>
             </p>
             <div class="button-container">
               <p>
@@ -559,15 +655,21 @@
           <div class="column span6">
             <h1>The Dragon</h1>
             <p>
-              <span class="option" path-option="B">You defeat the dragon and take 50% of the gold you find.</span><span class="option" path-option="A">Although you fight valiantly, you barely escape with your life.</span> You climb out from beneath the rubble
+              <span class="option" path-option="B">
+                You defeat the dragon and take 50% of the gold you find.
+              </span>
+              <span class="option" path-option="A">
+                Although you fight valiantly, you barely escape with your life.
+              </span>
+              You climb out from beneath the rubble
               <span class="server-load-info" req-place="3">
                 <span class="server-load info-option" server-choice="1">
                   .
                 </span>
                 <span class="server-load info-option" server-choice="2">
-                   and are greeting by the monster you freed earlier, who is waiting with an extra pouch of gold for you
+                   and are greeted by the monster you freed earlier, who is waiting with an extra pouch of gold for you.
                 </span>
-              </span>.
+              </span>
             </p>
             <div class="button-container">
               <p>
@@ -609,20 +711,35 @@
           <div class="column span12">
             <h1>Journey's End</h1>
             <p>
-              You have adventured bravely; perhaps others will follow in your footsteps. Today you ventured with <span class="partner">Load!Text</span>. Would you like to share your adventure with future 
+              You have adventured bravely; perhaps others will follow in your footsteps. Today you ventured with 
+              <span class="partner">
+                Load!Text
+              </span>
+              . Would you like to share your adventure with future 
               wanderers?
             </p>
             <div class="button-container">
-              <span class="username"><form><label>Username: </label><input id="username" type="text"></input></form></span>
-               <span class="server-load-info" req-place="3">
+              <span class="username">
+                <form>
+                  <label>Username: </label>
+                  <input id="username" type="text"></input>
+                </form>
+              </span>
+              <span class="server-load-info" req-place="3">
                 <span class="server-load info-option" server-choice="1">
-                  <span class="button trigger" id="submit-path" stage="24" path="O">Yes</span>
+                  <span class="button trigger" id="submit-path" stage="24" path="O">
+                    Yes
+                  </span>
                 </span>
                 <span class="server-load info-option" server-choice="2">
-                  <span class="button trigger" id="submit-path" stage="26" path="O">Yes</span>
+                  <span class="button trigger" id="submit-path" stage="26" path="O">
+                    Yes
+                  </span>
                 </span>
               </span>
-              <span class="button trigger" stage="24" path="O">No</span>
+              <span class="button trigger" stage="24" path="O">
+                No
+              </span>
             </div>
           </div>
         </div>
@@ -637,13 +754,17 @@
               decision to make…
             </p>
             <div class="button-container">
-              <span class="button trigger" stage="1" path="O">Onward</span>
-              <span class="button trigger" stage="25" path="O">About</span>
+              <span class="button trigger" stage="1" path="O">
+                Onward
+              </span>
+              <span class="button trigger" stage="25" path="O">
+                About
+              </span>
             </div>
           </div>
         </div>
       </div>
-    <div class="container stage stage-26 background-change">
+      <div class="container stage stage-26 background-change">
         <div class="row">
           <div class="column span12">
             <h1>The Tavern</h1>
@@ -653,8 +774,12 @@
               decision to make…
             </p>
             <div class="button-container">
-              <span class="button trigger" stage="1" path="O">Onward</span>
-              <span class="button trigger" stage="25" path="O">About</span>
+              <span class="button trigger" stage="1" path="O">
+                Onward
+              </span>
+              <span class="button trigger" stage="25" path="O">
+                About
+              </span>
             </div>
           </div>
         </div>
