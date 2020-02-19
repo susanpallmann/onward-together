@@ -170,7 +170,7 @@ function loadPartner (num) {
   if ( partner === "yes" ) {
     var partnerPath = userPath;
     var first = userPath[0];
-    if (first === "1") {
+    if (first === 1) {
       partnerPath[0] = "2";
     } else {
       partnerPath[0] = "1";
