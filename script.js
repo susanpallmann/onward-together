@@ -101,8 +101,6 @@ function newPath( id , username ) {
   values.timestamp = timestamp;
   var pathRef = firebase.database().ref('paths/' + id);
   var newChildRef = pathRef.push(values);
-  //var key = newChildRef.getKey();
-  //pathRef.child(key).push(values);
 }
 
 function gatherIds () {
@@ -116,7 +114,7 @@ function gatherIds () {
   var string2 = '0' + choice1 + choice2 + '00';
   var string3 = '000' + choice3 + '0';
   var string4 = '0000' + choice4;
-  var pathRef = firebase.database().ref('counters/' + 'total');
+  gatheredIds.push("total");
   gatheredIds.push(id);
   gatheredIds.push(string1);
   gatheredIds.push(string2);
@@ -125,7 +123,6 @@ function gatherIds () {
   console.log(gatheredIds);
   gatheredIds.forEach(updateCounters);
 }
-
 function updateCounters(item, index) {
   dbLocation = item;
   console.log(dbLocation);
