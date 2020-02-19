@@ -136,7 +136,7 @@ function updateCounters(item, index) {
     var existingCount = parseInt(anotherCount);
     console.log(anotherCount + " " + existingCount);
     var newCount = existingCount ++;
+    pathRef.set({ count: newCount});
   });
-  //pathRef.set({ count: newCount});
 }
 // Stupid errors
