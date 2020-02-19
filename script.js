@@ -177,7 +177,7 @@ function loadPartner (num) {
     }
     var partnerId = partnerPath.join("");
     var pathRef = firebase.database().ref('paths/' + partnerId);
-    var mostRecentRef = pathRef.orderByChild('timestamp').limitToLast(1);
+    var mostRecentRef = pathRef.orderByChild(partnerId + '/timestamp').limitToLast(1);
     console.log(mostRecentRef);
     //$('.partner').html('');
   }
