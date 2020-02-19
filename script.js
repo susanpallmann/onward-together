@@ -177,12 +177,10 @@ function loadPartner (num) {
     }
     var partnerId = partnerPath.join("");
     var pathRef = firebase.database().ref('paths/' + partnerId + '/');
-    var mostRecentRef = pathRef.orderByChild('timestamp').limitToLast(1);
-    mostRecentRef.once('value').then(function(snapshot) {
-      var key = snapshot.key;
-      var childKey = snapshot.child("username");
-      console.log(key + " " + childKey);
-    });   
+    var ref = firebase.database().ref('paths/' + partnerId + '/');
+    ref.orderByChild("timestamp").on("child_added", function(snapshot) {
+      console.log(snapshot.key + " was " + snapshot.val().timestamp + " m tall");
+    });
     //$('.partner').html('');
   }
 }
