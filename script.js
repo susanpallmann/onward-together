@@ -139,3 +139,4 @@ function updateCounters(item, index) {
     count: newCount
   });
 }
+// Stupid errors
