@@ -126,9 +126,9 @@ function gatherIds () {
   gatheredIds.forEach(updateCounters);
 }
 
-/*function updateCounters(item, index) {
-  location = item;
-  console.log(location);*/
+function updateCounters(item, index) {
+  dbLocation = item;
+  console.log(dbLocation);
 /*  var pathRef = firebase.database().ref('counters/' + location);
   var countRef = firebase.database().ref('counters/' + location + '/count');
   var anotherCount;
@@ -143,5 +143,5 @@ function gatherIds () {
   pathRef.set({
     count: newCount
   }); */
-//}
+}
 // Stupid errors
