@@ -179,7 +179,7 @@ function loadPartner (num) {
     var pathRef = firebase.database().ref('paths/' + partnerId + '/');
     var ref = firebase.database().ref('paths/' + partnerId + '/');
     ref.orderByChild("timestamp").on("child_added", function(snapshot) {
-      console.log(snapshot.key + " was " + snapshot.val().timestamp + " m tall");
+      console.log(snapshot.key + " was " + snapshot.val().timestamp + " m tall and " + snapshot.val().username + " m wide");
     });
     //$('.partner').html('');
   }
