@@ -178,6 +178,7 @@ function loadPartner (num) {
     var partnerId = partnerPath.join("");
     var partnerName;
     var pathRef = firebase.database().ref('paths/' + partnerId + '/');
+    console.log(partnerId);
     var ref = pathRef.orderByChild("timestamp").limitToLast(1);
     ref.once('value').then(function(snapshot) {
       partnerName = snapshot.val().username;
