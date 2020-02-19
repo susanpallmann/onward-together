@@ -177,14 +177,12 @@ function loadPartner (num) {
     }
     var partnerId = partnerPath.join("");
     var pathRef = firebase.database().ref('paths/' + partnerId + '/');
-    var mostRecentRef = pathRef.orderByChild(partnerId + '/timestamp').limitToLast(1);
+    var mostRecentRef = pathRef.orderByChild('timestamp').limitToLast(1);
     mostRecentRef.once('value').then(function(snapshot) {
       var key = snapshot.key;
       var childKey = snapshot.child("username");
       console.log(key + " " + childKey);
-    });
-    
-    
+    });   
     //$('.partner').html('');
   }
 }
