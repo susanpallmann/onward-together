@@ -181,8 +181,8 @@ function loadPartner (num) {
     var ref = firebase.database().ref('paths/' + partnerId + '/');
     ref.orderByChild("timestamp").on("child_added", function(snapshot) {
       partnerName = snapshot.val().username;
+      $('.partner').text(partnerName);
     });
-    $('.partner').html(partnerName);
   }
 }
 // Stupid errors
