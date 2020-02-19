@@ -178,6 +178,8 @@ function loadPartner (num) {
     var partnerId = partnerPath.join("");
     var pathRef = firebase.database().ref('paths/' + partnerId);
     var mostRecentRef = pathRef.orderByChild('timestamp').limitToLast();
+    console.log(mostRecentRef);
+    //$('.partner').html('');
   }
 }
 // Stupid errors
