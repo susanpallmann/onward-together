@@ -133,9 +133,7 @@ function updateCounters(item, index) {
   var countRef = firebase.database().ref('counters/' + dbLocation + '/count');
   var anotherCount;
   var loadCount = countRef.once('value').then(function(snapshot) {
-    for (count in snapshot.val()) {
-       console.log(count);
-    }
+    console.log(snapshot.val());
   });
   //var existingCount = parseInt(anotherCount);
   //var newCount = existingCount ++;
