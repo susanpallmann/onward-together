@@ -169,8 +169,8 @@ function loadPartner (num) {
   var partner = $('.stage-' + newNumber).attr('partner');
   if ( partner === "yes" ) {
     var partnerPath = userPath;
-    var first = userPath[0];
-    if (first === 1) {
+    var first = num.toString(userPath[0]);
+    if (first === "1") {
       partnerPath[0] = "2";
     } else {
       partnerPath[0] = "1";
