@@ -132,12 +132,11 @@ function updateCounters(item, index) {
   var pathRef = firebase.database().ref('counters/' + dbLocation);
   var countRef = firebase.database().ref('counters/' + dbLocation + '/count');
   var anotherCount;
-  var loadCount = countRef.once('value').then(function(count) {
-    console.log('count.val()', count.val());
-  }, function (error) {
-    console.log("Error");
-    console.log('count.val()', count.val());
-  });  
+  var loadCount = countRef.once('value').then(function(snapshot) {
+    for (existingCount in snapshot.val()) {
+       console.log(existingCount);
+    }
+  });
   //var existingCount = parseInt(anotherCount);
   //var newCount = existingCount ++;
   //pathRef.set({
