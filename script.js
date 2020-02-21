@@ -196,12 +196,16 @@ function calculatePercent(compare,to) {
   refThis.once('value').then(function(snapshot) {
     var newThis = snapshot.val();
     var intThis = parseInt(newThis);
-    console.log(intThis);
+    if ( intTo == 1 ) {
+      console.log(intThis);
+    }
   });
   refTo.once('value').then(function(snapshot) {
     var newTo = snapshot.val();
     var intTo = parseInt(newTo);
-    console.log(intTo);
+    if ( intThis == 1 ) {
+      console.log(intTo);
+    }
   });
   var percentage = (intThis/intTo)*100;
   return percentage;
