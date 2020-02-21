@@ -240,6 +240,6 @@ function fillCharts (percent, span) {
   var percent = percent;
   var roundedPercent = round5(percent)
   var container = $(this).parents('div');
-  var pieChart = container.find(.pie-chart);
+  var pieChart = container.find('.pie-chart');
   pieChart.find('img').addClass("percent-" + roundedPercent);
 }
