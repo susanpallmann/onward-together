@@ -9,7 +9,7 @@ $(document).ready(function () {
       $(this).delay(150).animate({'opacity':'1'},600);
     }
   });
-  $('#submit-path').click(function () {
+  $('.submit-path').click(function () {
     readyPath();
     gatherIds();
   });
