@@ -243,5 +243,6 @@ function fillCharts (percent, span) {
   console.log(text);
   var container = text.parent();
   var pieChart = container.find('.pie-chart');
-  pieChart.find('img').addClass("percent-" + roundedPercent);
+  pieChart.find('img').attr('src', 'images/pie-' + roundedPercent + '.jpg');
+  pieChart.find('img').attr('alt', roundedPercent + ' percent');
 }
