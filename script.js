@@ -27,6 +27,7 @@ $(document).ready(function () {
   $('.together').click(function () {
     $('.alternate-title').html('Together');
   });
+  inputPercent();
 });
 function preLoad(num, path) {
   console.log(num + " " + path);
@@ -187,4 +188,27 @@ function loadPartner (num) {
     });
   }
 }
-// Stupid errors
+function calculatePercent(compare,to) {
+  var compareThis = compare;
+  var compareTo = to;
+  var refThis = firebase.database().ref('counters/' + compareThis + '/count');
+  var refTo = firebase.database().ref('counters/' + compareTo + '/count');
+  refThis.once('value').then(function(snapshot) {
+    var newThis = snapshot.val();
+    var intThis = parseInt(newThis);
+  });
+  refTo.once('value').then(function(snapshot) {
+    var newTo = snapshot.val();
+    var intTo = parseInt(newTo);
+  });
+  var percentage = (intThis/intTo)*100;
+  return percentage;
+}
+function inputPercent() {
+  $(".caption").each(function( index ) {
+    compareThis = $(this).attr('compare-this');
+    compareTo = $(this).attr('compare-to');
+    percentage = calculatePercent(compareThis,compareTo);
+    $(this).text(percentage);
+  });
+}
