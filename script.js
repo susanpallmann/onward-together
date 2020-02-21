@@ -226,7 +226,7 @@ function inputPercent() {
   });
 }
 function changeSpan(percentage,span) {
-  percentage = percentage;
+  percentage = Math.round(percentage);
   span = span;
   span.text(percentage + "%");
 }
