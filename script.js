@@ -188,35 +188,45 @@ function loadPartner (num) {
     });
   }
 }
-function calculatePercent(compare,to) {
+function calculatePercent(compare,to,span) {
+  var span = span;
   var compareThis = compare;
   var compareTo = to;
   var refThis = firebase.database().ref('counters/' + compareThis + '/count');
   var refTo = firebase.database().ref('counters/' + compareTo + '/count');
   var intTo;
   var intThis;
+  var percentage;
   refThis.once('value').then(function(snapshot) {
     var newThis = snapshot.val();
     intThis = parseInt(newThis);
     if ( intTo == null ) {
-      console.log(intThis);
+    } else {
+      percentage = (intThis/intTo)*100;
+      changeSpan(percentage,span);
     }
   });
   refTo.once('value').then(function(snapshot) {
     var newTo = snapshot.val();
     intTo = parseInt(newTo);
     if ( intThis == null ) {
-      console.log(intTo);
+    } else {
+      percentage = (intThis/intTo)*100;
+      changeSpan(percentage,span);
     }
   });
-  //var percentage = (intThis/intTo)*100;
   //return percentage;
 }
 function inputPercent() {
   $(".caption").each(function( index ) {
+    var span = $(this);
     compareThis = $(this).attr('compare-this');
     compareTo = $(this).attr('compare-to');
-    percentage = calculatePercent(compareThis,compareTo);
-    //$(this).text(percentage);
+    calculatePercent(compareThis,compareTo,span);
   });
+}
+function changeSpan(percentage,span) {
+  percentage = percentage;
+  span = span;
+  span.text(percentage + "%");
 }
