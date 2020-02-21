@@ -193,16 +193,18 @@ function calculatePercent(compare,to) {
   var compareTo = to;
   var refThis = firebase.database().ref('counters/' + compareThis + '/count');
   var refTo = firebase.database().ref('counters/' + compareTo + '/count');
+  var intTo;
+  var intThis;
   refThis.once('value').then(function(snapshot) {
     var newThis = snapshot.val();
-    var intThis = parseInt(newThis);
+    intThis = parseInt(newThis);
     if ( intTo == null ) {
       console.log(intThis);
     }
   });
   refTo.once('value').then(function(snapshot) {
     var newTo = snapshot.val();
-    var intTo = parseInt(newTo);
+    intTo = parseInt(newTo);
     if ( intThis == null ) {
       console.log(intTo);
     }
