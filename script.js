@@ -204,6 +204,7 @@ function calculatePercent(compare,to,span) {
     } else {
       percentage = (intThis/intTo)*100;
       changeSpan(percentage,span);
+      fillCharts(percentage,span);
     }
   });
   refTo.once('value').then(function(snapshot) {
@@ -213,6 +214,7 @@ function calculatePercent(compare,to,span) {
     } else {
       percentage = (intThis/intTo)*100;
       changeSpan(percentage,span);
+      fillCharts(percentage,span);
     }
   });
   //return percentage;
@@ -229,4 +231,15 @@ function changeSpan(percentage,span) {
   percentage = Math.round(percentage);
   span = span;
   span.text(percentage + "%");
+}
+function round5(percent) {
+  return (percent % 5) >= 2.5 ? parseInt(percent / 5) * 5 + 5 : parseInt(percent / 5) * 5;
+}
+
+function fillCharts (percent, span) {
+  var percent = percent;
+  var roundedPercent = round5(percent)
+  var container = $(this).parents('div');
+  var pieChart = container.find(.pie-chart);
+  pieChart.find('img').addClass("percent-" + roundedPercent);
 }
