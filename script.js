@@ -196,25 +196,25 @@ function calculatePercent(compare,to) {
   refThis.once('value').then(function(snapshot) {
     var newThis = snapshot.val();
     var intThis = parseInt(newThis);
-    if ( intTo == 1 ) {
+    if ( intTo == null ) {
       console.log(intThis);
     }
   });
   refTo.once('value').then(function(snapshot) {
     var newTo = snapshot.val();
     var intTo = parseInt(newTo);
-    if ( intThis == 1 ) {
+    if ( intThis == null ) {
       console.log(intTo);
     }
   });
-  var percentage = (intThis/intTo)*100;
-  return percentage;
+  //var percentage = (intThis/intTo)*100;
+  //return percentage;
 }
 function inputPercent() {
   $(".caption").each(function( index ) {
     compareThis = $(this).attr('compare-this');
     compareTo = $(this).attr('compare-to');
     percentage = calculatePercent(compareThis,compareTo);
-    $(this).text(percentage);
+    //$(this).text(percentage);
   });
 }
