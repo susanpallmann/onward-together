@@ -110,9 +110,13 @@ function editPath (place, choice) {
 
 // Puts the path together to form the full ID, then calls the newPath function when done.
 function readyPath () {
+  console.log("test1");
   username = $('#username').val();
+  console.log("test2");
   id = userPath.join("");
+  console.log("test3");
   newPath( id , username );
+  console.log("test4");
 }
 
 // Submits the new path to the database.
@@ -133,27 +137,21 @@ function newPath( id , username ) {
 
 function gatherIds () {
   var id = userPath.join("");
-  console.log("test1");
   var gatheredIds = [];
   var choice1 = userPath[1];
   var choice2 = userPath[2];
   var choice3 = userPath[3];
   var choice4 = userPath[4];
-  console.log("test2");
   var string1 = '0' + choice1 + '000';
   var string2 = '0' + choice1 + choice2 + '00';
   var string3 = '000' + choice3 + '0';
   var string4 = '0000' + choice4;
-  console.log("test3");
   gatheredIds.push("total");
-  console.log("test4");
   gatheredIds.push(id);
-  console.log("test5");
   gatheredIds.push(string1);
   gatheredIds.push(string2);
   gatheredIds.push(string3);
   gatheredIds.push(string4);
-  console.log(gatheredIds);
   gatheredIds.forEach(updateCounters);
 }
 function updateCounters(item, index) {
