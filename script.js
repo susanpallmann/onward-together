@@ -110,13 +110,9 @@ function editPath (place, choice) {
 
 // Puts the path together to form the full ID, then calls the newPath function when done.
 function readyPath () {
-  console.log("test1");
   username = $('#username').val();
-  console.log("test2");
   id = userPath.join("");
-  console.log("test3");
   newPath( id , username );
-  console.log("test4");
 }
 
 // Submits the new path to the database.
