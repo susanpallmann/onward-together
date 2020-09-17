@@ -20,6 +20,8 @@ Check out the live [website](https://susanpallmann.github.io/onward-together/ind
   * [Designed for HTML](#designed-for-html)
   * [Request Processor](#request-processor)
   * [Firebase](#firebase)
+  * [Data Visualization](#data-visualization)
+* [Conclusion](#conclusion)
 
 ## Story
 The story itself is not incredibly interesting. This is because if the story were interesting, and users had a positive response to the experience, it would be less clear if this response should be attributed to the experience itself rather than the story. As such, the writing relies on common fantasy tropes and does little to stand out.
@@ -217,3 +219,9 @@ Rather than storing each unique user as a directory with a path assigned, the po
 
 #### Ghost Partner
 The entire experience is what we're calling "ghost multiplayer". It is not realtime multiplayer (traffic would not support this type of functionality). Rather, when the player completes the story, the 5 digit path ID is generated. A given user's partner is someone who took almost the identical path, but had one difference: the Original or Echo choice. If the current user was the "Original", then their partner is whoever echoed back. The ID, then, of the partner is different by the first digit. The partner of someone who had the path 12222 is found under the ID 22222. Because multiplayer is not real-time, once the partner's ID has been determined, the database pulls the most recent player to complete that given path and supplies their name.
+
+### Data Visualization
+The site's [about page](https://susanpallmann.github.io/onward-together/about.html) pulls data from Firebase and shows visually which choices users made by percentages.
+
+## Conclusion
+Onward Together launched online on February 20, 2020 and passed the honors thesis defense process March 5, 2020. While the data collected through this project is not strictly empirical, many users who played reacted positively, and the average session duration was 4 minutes, 16 seconds, suggesting that users were engaged enough to complete the story, and found the experience memorable enough to discuss it with others. Based on the initial response from this creative thesis, it seems that further investigation into the potential for UI/UX design to help with retention could prove to be quite valuable. 
