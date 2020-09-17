@@ -56,7 +56,11 @@ All stage containers have the class **.stage** as well as an additional class to
 #### .stage.trigger, [stage], and [path]
 Some stages of the story do not provide buttons to progress the story down any particular path. In these situations, the **.stage** element has an additional class, **.trigger**, and some custom attributes to indicate the desired destination. The [stage] attribute lists which stage should be made visible next, and the [path] attribute dictates which information to show in the next stage. Adding these three attributes makes it so that the user can click anywhere in the stage to progress.
 
-The [path] attribute can have numerous values. In this project, alphabetical values from "A" forward are used to indicate that the desired path is one of several options. However, the value "O" is used when the desired path is the only option available.
+```html
+<div class="container stage stage-2 trigger" stage="3" path="O">
+```
+
+The [path] attribute can have numerous values. In this project, alphabetical values from "A" forward are used to indicate that the desired path is one of several options. However, the value "O" is used when the desired path is the only option available. It is important that in the next stage, there are **.option** elements with a corresponding attribute [path-option] value. Read more about this in the **.option** section.
 
 #### .button.trigger
 ```html
@@ -65,9 +69,6 @@ The [path] attribute can have numerous values. In this project, alphabetical val
 </span>
 ```
 
-```html
-<div class="container stage stage-2 trigger" stage="3" path="O">
-```
 
 
 ```html
