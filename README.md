@@ -99,10 +99,19 @@ Anything contained in a span with class **.option** and a [path-option] attribut
 ```html
 <span class="option" path-option="B">
 ```
-
+#### .server-load-info & .server-load.info-option
+At some points in the story, especially the flashback sequence, it is necessary to load choices made earlier in the story (not created by the last **.trigger** click event). In these cases, all options altered by this choice need to be wrapped in a span with the **.server-load-info** class. There is also a required attribute, [req-place] which indicates which position in the **userPath** array we are retrieving the information from.
 ```html
 <span class="server-load-info" req-place="0">
 ```
+This example is retrieving information from the first place in the **userPath** array, **userPath**[0], which is the Original or Echo choice.
+
+Inside of the **.server-load-info** span there should be as many **.server-load.info-option** options as there are possible values for the designated position in the array. In this situation, since **userPath**[0] can be either a "1" or a "2", there should be two **.server-load.info-option** elements contained in the parent **.server-load-info** span. The correspondence to each option is set by the [server-choice] attribute. Any elements with a [server-choice] attribute that does not match the value found at the index of **userPath** indicated by the [req-place] attribute of the parent span will be hidden.
+```html
+<span class="server-load info-option" server-choice="1">
+```
+#### .server-random & .server-load.random-option
+
 ```html
 <span class="server-random" random-max="3">
 ```
@@ -110,6 +119,3 @@ Anything contained in a span with class **.option** and a [path-option] attribut
 <span class="server-load random-option" random-option="1">
 ```
 
-```html
-<span class="server-load info-option" server-choice="1">
-```
