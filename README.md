@@ -73,11 +73,15 @@ Similar to our **.stage.trigger** elements, buttons must have the class **.trigg
 #### var userPath
 The user's choices make up a unique path. There are five points in the story at which the path direction is chosen, so paths are referred to as 5-digit numbers. The paths are detailed as follows:
 
-1. Alone or Together - This is the initial choice the user makes, stored in the first position of the **userPath** array as either a 1 or a 2. (Alone = 1, Together = 2).
+1. **Alone or Together** - This is the initial choice the user makes, stored in the first position of the **userPath** array as either a 1 or a 2. (Alone = 1, Together = 2).
 
-2. Original or Echo - This path is determined randomly by the client. The user gets lost in the Echo Cliffs, and is either the first to call out, asking for direction, or the one who answers. This is stored in the second positon of the **userPath** array as either a 1 or a 2. (Original = 1, Echo = 2).
+2. **Original or Echo** - This path is determined randomly by the client. The user gets lost in the Echo Cliffs, and is either the first to call out, asking for direction, or the one who answers. This is stored in the second positon of the **userPath** array as either a 1 or a 2. (Original = 1, Echo = 2).
 
-3. Traveling Cutscene - This path has three options, meant to represent three possible travel cutscenes as the directions given on the Echo Cliffs if the user chose "Together" for the first option. However, even if the user chose to go "Alone", there are still three possible paths; they just all have the same cutscene. (Mushroom Forest = 1, Crystal Tunnel = 2, Wisp River = 3).
+3. **Traveling Cutscene** - This path has three options, meant to represent three possible travel cutscenes as the directions given on the Echo Cliffs if the user chose "Together" for the first option. However, even if the user chose to go "Alone", there are still three possible paths; they just all have the same cutscene. This choice occupies the third position in the **userPAth** array. (Mushroom Forest = 1, Crystal Tunnel = 2, Wisp River = 3).
+
+4. **Help the Monster** - This choice allows the user to either have mercy on a trapped monster or ignore it. This does not change the outcome of the story other than showing a silhouette of the monster on the replay scene (above the tavern). This choice is stored in the fourth position. (Ignore = 1, Help = 2).
+
+5. **Alone or Together** - The user is presented with their original choice again and can either join an adventurer or leave them behind. Choosing to go together causes the "happy" ending. Going alone causes survival, but does not defeat the dragon. This choice is stored in the fifth and final position of the **userPath** array. (Alone = 1, Together = 2).
 
 #### [choice] & [place]
 Two additional attributes can be applied to buttons: [choice], which indicates to the script that clicking this button should store a specific choice in the story path, and [place], which indicates which position in the array of choices this new value should occupy.
