@@ -92,8 +92,10 @@ Two additional attributes can be applied to buttons: [choice], which indicates t
   I’m lost!
 </span>
 ```
-When clicked, the button above will store
+When clicked, the button above will store the choice "2" at **userPath**[2].
 
+#### .option & [path-option]
+Anything contained in a span with class **.option** and a [path-option] attribute of "B" will only display if the previous **.trigger** had the attribute [path] equal to "B". All other [path-option] values within the parent **.stage** will be hidden before the **.stage** is made visible.
 ```html
 <span class="option" path-option="B">
 ```
@@ -110,8 +112,4 @@ When clicked, the button above will store
 
 ```html
 <span class="server-load info-option" server-choice="1">
-```
-
-```html
-<span class="server-load-info" req-place="0">
 ```
