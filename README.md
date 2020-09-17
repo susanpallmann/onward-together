@@ -3,7 +3,7 @@ Onward Together is an experimental create-your-own-adventure story with a multip
 
 Check out the live [website](https://susanpallmann.github.io/onward-together/index.html)
 
-![Image of animated scene from Onward Together](https://www.susanpallmanndesign.com/images/onward-together/onward-illustration-1.gif)
+![Image of scenes from Onward Together](https://www.susanpallmanndesign.com/images/onward-together/onward-mobile-1.png)
 
 ## Contents
 ## Illustration
