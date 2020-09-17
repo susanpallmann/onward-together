@@ -170,7 +170,13 @@ function advanceStage(num , path) {
 }
 ```
 
-Several functions are run to prepare the **.stage** to be made visible with the correct content. However, some functions may have no effect if the elements each function acts upon are not present in the target **.stage**. For example, the **serverInfoPreLoad** function specifically will not change the **.stage** contents if **.server-load-info** and **.server-load.info-option** are not present within it.
+Several functions are run to prepare the **.stage** to be made visible with the correct content. 
+* **preLoad** - checks the selected path letter and shows content accordingly
+* **serverPreLoad** - prepares random number generation and shows content accordingly
+* **serverInfoPreLoad** - checks the **userPath** array at a specific index and shows content accordinly
+* **loadPartner** - only used in final screens, checks database for the user's "ghost partner" (see [Firebase](#firebase) section for more info)
+
+However, some functions may have no effect if the elements each function acts upon are not present in the target **.stage**. For example, the **serverInfoPreLoad** function specifically will not change the **.stage** contents if **.server-load-info** and **.server-load.info-option** are not present within it.
 ```javascript
 function serverInfoPreLoad (num, path) {
   var newNumber = num;
@@ -199,3 +205,5 @@ function setBackground(num, path) {
 }
 ```
 The file "stage-24O.gif" is loaded by the function **setBackground** if the destination **.stage** element has the class **.background-change**, and the **.trigger** that began this **.stage** change had the attributes [stage="24"] and [path="O"].
+
+After calling the preparation functions, the destination **.stage** is given the class **.visible** to show the new content.
