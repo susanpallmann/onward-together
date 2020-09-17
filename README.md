@@ -53,8 +53,41 @@ The entire story is contained in a single HTML document (index.html), and the sc
 <div class="container stage stage-3">
 ```
 All stage containers have the class **.stage** as well as an additional class to indicate which stage specifically it is (**.stage-3** in this example).
-#### .trigger, [stage], and [path]
-Some stages of the story do not provide buttons to progress the story down any particular path. In these situations, the **.stage** element has an additional class, **.trigger**, and some custom attributes to indicate that th
+#### .stage.trigger, [stage], and [path]
+Some stages of the story do not provide buttons to progress the story down any particular path. In these situations, the **.stage** element has an additional class, **.trigger**, and some custom attributes to indicate the desired destination. The [stage] attribute lists which stage should be made visible next, and the [path] attribute dictates which information to show in the next stage. Adding these three attributes makes it so that the user can click anywhere in the stage to progress.
+
+The [path] attribute can have numerous values. In this project, alphabetical values from "A" forward are used to indicate that the desired path is one of several options. However, the value "O" is used when the desired path is the only option available.
+
+#### .button.trigger
+```html
+<span class="button trigger" stage="4" path="A" place="2" choice="2">
+  I’m lost!
+</span>
+```
+
 ```html
 <div class="container stage stage-2 trigger" stage="3" path="O">
+```
+
+
+```html
+<span class="option" path-option="B">
+```
+
+```html
+<span class="server-load-info" req-place="0">
+```
+```html
+<span class="server-random" random-max="3">
+```
+```html
+<span class="server-load random-option" random-option="1">
+```
+
+```html
+<span class="server-load info-option" server-choice="1">
+```
+
+```html
+<span class="server-load-info" req-place="0">
 ```
