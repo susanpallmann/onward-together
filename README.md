@@ -5,17 +5,16 @@ Check out the live [website](https://susanpallmann.github.io/onward-together/ind
 
 ## Contents
 
-* Contents
-* Story
-* Illustration
-* Animation
-* Design
-  * Typography
-  * Progression
-  * Art Style
-  * Variable Paths
-  * Repetition
-  * Multiplayer
+* [Story](#story)
+* [Illustration](#illustration)
+* [Animation](#animation)
+* [Design](#design)
+  * [Typography](#typography)
+  * [Progression](#progression)
+  * [Art Style](#art-style)
+  * [Variable Paths](#variable-paths)
+  * [Repetition](#repetition)
+  * [Multiplayer](#multiplayer)
 
 ## Story
 ## Illustration
