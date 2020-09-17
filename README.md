@@ -15,6 +15,10 @@ Check out the live [website](https://susanpallmann.github.io/onward-together/ind
   * [Variable Paths](#variable-paths)
   * [Repetition](#repetition)
   * [Multiplayer](#multiplayer)
+* [Development](#development)
+  * [Prerequisite: Discount Bootstrap](#prerequisite-discount-bootstrap)
+  * [Designed for HTML](#designed-for-html)
+  * [Request Processor](#request-processor)
 
 ## Story
 The story itself is not incredibly interesting. This is because if the story were interesting, and users had a positive response to the experience, it would be less clear if this response should be attributed to the experience itself rather than the story. As such, the writing relies on common fantasy tropes and does little to stand out.
@@ -83,7 +87,11 @@ The user's choices make up a unique path. There are five points in the story at 
 
 5. **Alone or Together** - The user is presented with their original choice again and can either join an adventurer or leave them behind. Choosing to go together causes the "happy" ending. Going alone causes survival, but does not defeat the dragon. This choice is stored in the fifth and final position of the **userPath** array. (Alone = 1, Together = 2).
 
-Throughout the story, values are added to the **userPath** array in the correct place. This array is converted to a 5-digit ID when the information gets submitted to the database.
+Throughout the story, values are added to the **userPath** array in the correct place. This array is converted to a 5-digit ID when the information gets submitted to the database. By default, the values of each index to be used are set to 0.
+
+```javascript
+userPath = [0,0,0,0,0];
+```
 
 #### [choice] & [place]
 Two additional attributes can be applied to buttons: [choice], which indicates to the script that clicking this button should store a specific choice value in the story path, and [place], which indicates which position in the **userPath** array this new value should occupy.
@@ -124,3 +132,42 @@ while anything in spans with other values for [random-option], like the followin
 <span class="server-load random-option" random-option="3">
 ```
 Make sure that there are options for each random integer between 1 and the value indicated by [random-max].
+
+### Request Processor
+When a **.trigger** is clicked, the attributes talked about are located, and their values are assigned to values. These variables are then passed into two functions, **editPath** and **advanceStage**.
+```javascript
+$('.trigger').click(function () {
+    var stage = $(this).attr('stage');
+    var path = $(this).attr('path');
+    var place = $(this).attr('place');
+    var choice = $(this).attr('choice');
+    editPath(place, choice);
+    advanceStage(stage, path);
+  });
+```
+The **editPath** function updates the **userPath** array with the information passed in.
+```javascript
+function editPath (place, choice) {
+  place = place;
+  choice = choice;
+  userPath[place] = choice;
+}
+```
+The **advanceStage** function begins a number of processes by calling other functions with parameters passed in. This function also hides all **.stage** elements by removing the class **.visible**, and then adding the class **.visible** to the next **.stage**. By default, the background-image of the body element is removed in case there were any. Should the next stage require a background-image, this is added back by the **setBackground** function.
+
+```javascript
+function advanceStage(num , path) {
+  var newNumber = num;
+  var chosenPath = path;
+  $('.visible').removeClass('visible');
+  $('body').css('background-image','none');
+  preLoad(newNumber , chosenPath);
+  serverPreLoad(newNumber , chosenPath);
+  serverInfoPreLoad(newNumber , chosenPath);
+  loadPartner(newNumber);
+  setBackground(newNumber , chosenPath);
+  $('.stage-' + newNumber).addClass('visible');
+}
+```
+
+Several functions are run to prepare the **.stage** to be made visible with the correct content. However, some functions may have no effect if the elements each function acts upon are not present in the target **.stage**. For example, 
