@@ -110,6 +110,7 @@ Anything contained in a span with class **.option** and a [path-option] attribut
 ```html
 <span class="option" path-option="B">
 ```
+If the [path] attribute of the previous **.trigger** was set to "O", the script will check if the user is currently on an "Alone" path or a "Together" path and treat any child **.option** spans as though [path-option="A"] = alone, and [path-option="B"] = together.
 #### .server-load-info & .server-load.info-option
 At some points in the story, especially the flashback sequence, it is necessary to load choices made earlier in the story (not created by the last **.trigger** click event). In these cases, all options altered by this choice need to be wrapped in a span with the **.server-load-info** class. There is also a required attribute, [req-place] which indicates which position in the **userPath** array we are retrieving the information from.
 ```html
