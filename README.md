@@ -36,3 +36,25 @@ Cognitive offloading is prevented by having 48 possible story paths. The user is
 Information is repeated through story "flashbacks," the game's replayability, and social aspects. In order to find different story outcomes, or compare with others, the user must recall the decisions they made previously. 
 ### Multiplayer
 Although the multiplayer parts are subtle, the presence of another player encourages the user to think about how their actions affect both the story and other people. It also encourages replayability. 
+## Development
+### Prerequisite: Discount Bootstrap
+"Discount Bootstrap" is my lightweight take on Bootstrap's responsive grid system. It has its own repository and documentation over at https://github.com/susanpallmann/discount-bootstrap. It provides most of the website structure through use of classes like:
+```css
+.container
+.row
+.column
+.span12
+.md
+```
+### Designed for HTML
+#### .stage
+The entire story is contained in a single HTML document (index.html), and the scripts show or hide specific elements (called "stages").
+```html
+<div class="container stage stage-3">
+```
+All stage containers have the class **.stage** as well as an additional class to indicate which stage specifically it is (**.stage-3** in this example).
+#### .trigger, [stage], and [path]
+Some stages of the story do not provide buttons to progress the story down any particular path. In these situations, the **.stage** element has an additional class, **.trigger**, and some custom attributes to indicate that th
+```html
+<div class="container stage stage-2 trigger" stage="3" path="O">
+```
