@@ -1,7 +1,7 @@
 # Onward Together
 Onward Together is an experimental create-your-own-adventure story with a multiplayer aspect. It was created as part of an [honors thesis](https://www.susanpallmanndesign.com/files/interaction-design-for-retention.pdf) on using interaction design to improve the viewer's retention of the story.
 
-Check out the live [website](https://susanpallmann.github.io/onward-together/index.html)
+Check out the live [website](https://susanpallmann.github.io/onward-together/index.html) for more context.
 
 ## Contents
 
