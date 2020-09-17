@@ -1,5 +1,5 @@
 # Onward Together
-Onward Together is an experimental create-your-own-adventure story with a multiplayer aspect. It was created as part of an [honors thesis](https://www.susanpallmanndesign.com/files/interaction-design-for-retention.pdf) on using interaction design to improve the viewer's retention of the story.
+Onward Together is an experimental create-your-own-adventure story with a multiplayer aspect. It was created as part of an [honors thesis](https://www.susanpallmanndesign.com/files/interaction-design-for-retention.pdf) on using interaction design to improve the viewer's retention of the story. The entire project, with the exception of preliminary research, was completed in the span of 1 month, including the writing, illustration, design, development, and user testing.
 
 Check out the live [website](https://susanpallmann.github.io/onward-together/index.html) for more context.
 
@@ -19,6 +19,7 @@ Check out the live [website](https://susanpallmann.github.io/onward-together/ind
   * [Prerequisite: Discount Bootstrap](#prerequisite-discount-bootstrap)
   * [Designed for HTML](#designed-for-html)
   * [Request Processor](#request-processor)
+  * [Firebase](#firebase)
 
 ## Story
 The story itself is not incredibly interesting. This is because if the story were interesting, and users had a positive response to the experience, it would be less clear if this response should be attributed to the experience itself rather than the story. As such, the writing relies on common fantasy tropes and does little to stand out.
@@ -207,3 +208,12 @@ function setBackground(num, path) {
 The file "stage-24O.gif" is loaded by the function **setBackground** if the destination **.stage** element has the class **.background-change**, and the **.trigger** that began this **.stage** change had the attributes [stage="24"] and [path="O"].
 
 After calling the preparation functions, the destination **.stage** is given the class **.visible** to show the new content.
+
+### Firebase
+This adventure is powered by Google Firebase. Firebase was chosen due to its ease of use and simple data structuring. Not all players are added to the database. Upon completing the story, the user is given another username (their "ghost partner") and provided the option to submit their path, as well as opt out.
+
+#### User Storage Method
+Rather than storing each unique user as a directory with a path assigned, the possible path IDs are used as the directory, and users are stored underneath the path they took with a timestamp.
+
+#### Ghost Partner
+The entire experience is what we're calling "ghost multiplayer". It is not realtime multiplayer (traffic would not support this type of functionality). Rather, when the player completes the story, the 5 digit path ID is generated. A given user's partner is someone who took almost the identical path, but had one difference: the Original or Echo choice. If the current user was the "Original", then their partner is whoever echoed back. The ID, then, of the partner is different by the first digit. The partner of someone who had the path 12222 is found under the ID 22222. Because multiplayer is not real-time, once the partner's ID has been determined, the database pulls the most recent player to complete that given path and supplies their name.
