@@ -66,7 +66,7 @@ The [path] attribute can have numerous values. In this project, alphabetical val
 #### .button.trigger
 Similar to our **.stage.trigger** elements, buttons must have the class **.trigger**, and attributes [stage] and [path].
 ```html
-<span class="button trigger" stage="4" path="A" place="2" choice="2">
+<span class="button trigger" stage="4" path="A">
   I’m lost!
 </span>
 ```
@@ -83,10 +83,15 @@ The user's choices make up a unique path. There are five points in the story at 
 
 5. **Alone or Together** - The user is presented with their original choice again and can either join an adventurer or leave them behind. Choosing to go together causes the "happy" ending. Going alone causes survival, but does not defeat the dragon. This choice is stored in the fifth and final position of the **userPath** array. (Alone = 1, Together = 2).
 
+Throughout the story, values are added to the **userPath** array in the correct place. This array is converted to a 5-digit ID when the information gets submitted to the database.
+
 #### [choice] & [place]
-Two additional attributes can be applied to buttons: [choice], which indicates to the script that clicking this button should store a specific choice in the story path, and [place], which indicates which position in the array of choices this new value should occupy.
-
-
+Two additional attributes can be applied to buttons: [choice], which indicates to the script that clicking this button should store a specific choice value in the story path, and [place], which indicates which position in the **userPath** array this new value should occupy.
+```html
+<span class="button trigger" stage="4" path="A" place="2" choice="2">
+  I’m lost!
+</span>
+```
 
 ```html
 <span class="option" path-option="B">
