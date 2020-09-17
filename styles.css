@@ -1,3 +1,13 @@
+/* Contents
+    - Stage Progression Functionality
+    - Basic Styles
+    - Footer 
+    - Forms & Data Vis
+    - Bootstrap Add-Ons (discount bootstrap overrides)
+    - Header Styles
+    - Nav Underline Animation (shamelessly copied from my portfolio website)
+*/
+
 /* Stage Progression Functionality */
 main .container.stage {
   opacity: 0;
@@ -16,7 +26,7 @@ main .container.stage.visible {
   -webkit-transition-duration: .6s;
   -webkit-transition-timing-function: linear; 
 }
-/* Basic Style Initialization */
+/* Basic Styles */
 body {
   font-family: 'Libre Baskerville', times, serif;
   color: #ffffff;
@@ -98,6 +108,7 @@ a {
   font-size: 0.7em;
   letter-spacing: 0.2em;
 }
+/* Footer Styles */
 footer {
   position: fixed;
   bottom: 0;
