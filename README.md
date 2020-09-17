@@ -17,8 +17,11 @@ Check out the live [website](https://susanpallmann.github.io/onward-together/ind
   * [Multiplayer](#multiplayer)
 
 ## Story
+The story itself is not incredibly interesting. This is because if the story were interesting, and users had a positive response to the experience, it would be less clear if this response should be attributed to the experience itself rather than the story. As such, the writing relies on common fantasy tropes and does little to stand out.
 ## Illustration
+The illustration style is based on storyboards and concept art done for films. The loose stroke-based style manages to create a sense of space with minimal detail, allowing the viewer's imagination to fill in the rest. All illustrations and animations were created in Adobe Photoshop.
 ## Animation
+The animation is kept to simple (usually 4-frame) repeating animations to match the vague art style. Although the animation itself is quite minimal, it does make the interaction feel more dynamic, when in reality it is simply pressing buttons.
 ## Design
 There are six primary strategies employed in this website to make the experience more memorable. The story itself is designed to be rather unremarkable. By keeping the subject of the story familiar, any positive reaction from the audience can be attributed to the interaction design rather than the story itself.
 ### Typography
