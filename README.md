@@ -170,4 +170,32 @@ function advanceStage(num , path) {
 }
 ```
 
-Several functions are run to prepare the **.stage** to be made visible with the correct content. However, some functions may have no effect if the elements each function acts upon are not present in the target **.stage**. For example, 
+Several functions are run to prepare the **.stage** to be made visible with the correct content. However, some functions may have no effect if the elements each function acts upon are not present in the target **.stage**. For example, the **serverInfoPreLoad** function specifically will not change the **.stage** contents if **.server-load-info** and **.server-load.info-option** are not present within it.
+```javascript
+function serverInfoPreLoad (num, path) {
+  var newNumber = num;
+  var chosenPath = path;
+  var newStage = $('.stage-' + newNumber);
+  var stageLoadInfos = newStage.find('.server-load-info');
+  stageLoadInfos.each(function( index ) {
+    var reqPlace = $(this).attr('req-place');
+    var specificPath = userPath[reqPlace];
+    $(this).find('.info-option').css('display','none');
+    $(this).find('.info-option[server-choice=' + specificPath + ']').css('display','inline');
+  });
+}
+```
+
+If the next **.stage** element has the class **.background-change**, the function **setBackground** will set the background-image of the body element to an image with a matching naming convention. 
+```javascript
+function setBackground(num, path) {
+  var newNumber = num;
+  var chosenPath = path;
+  if ( $('.stage-' + newNumber).hasClass('background-change') ) {
+    console.log('if statement triggered');
+    $('body').css('background-image','url("images/stage-' + newNumber + chosenPath + '.gif")');
+  }
+  console.log('setbackground function triggered');
+}
+```
+The file "stage-24O.gif" is loaded by the function **setBackground** if the destination **.stage** element has the class **.background-change**, and the **.trigger** that began this **.stage** change had the attributes [stage="24"] and [path="O"].
